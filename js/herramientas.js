@@ -1,7 +1,8 @@
 const containerCards = document.getElementById('container-cards');
 
-import {herramientas} from './base_Datos_CP.js'
-import { buscarHerramientasname } from './base_Datos_CP.js';
+import {herramientas} from './base_Datos.js'
+import {contadorCarrito} from './carritoSpan.js'
+import { buscarHerramientasName } from './base_Datos.js';
 import * as dateBase from "./base_Datos.js";
 
 const createCard = () => {
@@ -73,8 +74,9 @@ containerCards.addEventListener('click', e => {
         // //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = (productoTarjeta.querySelector('.nombreProducto').textContent);
         console.log(infoProduct);
-        const elementoBD = buscarHerramientasname(infoProduct);
+        const elementoBD = buscarHerramientasName(infoProduct);
         console.log(elementoBD);
         dateBase.añadirCarrito(elementoBD);
+        contadorCarrito();
     }
 });
