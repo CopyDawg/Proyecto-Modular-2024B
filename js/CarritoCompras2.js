@@ -9,58 +9,65 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 
 
 // FUNCION PARA CONTADOR DEL CARRITO
-function contadorCarrito(){
+export function contadorCarrito(){
+    carrito = JSON.parse(localStorage.getItem('carrito'));
+    spanCarrito.innerHTML = "";
+    let imgCarrito = document.createElement('IMG');
+    imgCarrito.setAttribute('src', '../assets/icons/iconoCarrito.png');
+    imgCarrito.setAttribute('id', 'iconoCarrito');
     let badge = document.createElement('span');
     badge.classList.add('position-absolute', 'translate-middle', 'badge', 'rounded-pill', 'bg-danger');
     badge.setAttribute('id', 'carritoContador');
-    badge.textContent = carrito.length;
-    spanCarrito.appendChild(badge); 
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    carrito = JSON.parse(localStorage.getItem('carrito'));
+    badge.textContent = calcularProductos();
+    spanCarrito.append(imgCarrito, badge);
 }
 
-function renderTotal(){
-    var totalPrecio= 0;
-    carrito.forEach(producto => {
-        totalPrecio += (producto.precio*producto.cantidad);
-        console.log(producto.precio)
-        });
-    total.textContent = "Total a pagar: "+totalPrecio;
+function calcularProductos() {
+    let total = 0;
+    carrito.forEach( (producto) => {
+        total += producto.cantidad;
+    });
+    return total;
 }
 
-
+function calcularTotal() {
+    let total = 0;
+    carrito.forEach( producto => {
+        total += (producto.precio * producto.cantidad);
+    });
+    console.log(total);
+    const texto = document.getElementById("total");
+    texto.textContent = `Total a pagar: ${total}`
+}
 
 function  eliminarCarrito(indice){
+    console.log('inicio: ', carrito)
     carrito = carrito.filter(object => {
+        if (object.id === indice) {
+            object.cantidad = 0;
+        }
         return object.id !== indice;
-      });
+    });
+    console.log('final: ', carrito)
 
 }
 
 
 mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Eliminar') ){
-        const productoTarjeta = e.target.parentElement.parentElement.parentElement.parentElement;
+        const productoTarjeta = e.target.parentElement.parentElement.parentElement;
         console.log(productoTarjeta);
         console.log(productoTarjeta.querySelector('.NombreTarjeta').textContent);
 
         //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
-
-        const infoProduct2 = {
-            nombre: productoTarjeta.querySelector('.NombreTarjeta').textContent,
-            cantidad : 1,
-            precio: productoTarjeta.querySelector('.precioProducto').textContent
-
-        }
+        console.log(infoProduct)
 
         eliminarCarrito(infoProduct.id);
-        console.log(carrito);
-        RenderCarrito();
-        renderTotal();
         localStorage.setItem('carrito', JSON.stringify(carrito));
         carrito = JSON.parse(localStorage.getItem('carrito'));
-
+        RenderCarrito();
+        calcularTotal();
     }
 });
 
@@ -98,13 +105,11 @@ mainContainerTarjetas.addEventListener('click', e => {
                 eliminarCarrito(infoProduct.id);
             }
         }
-       // console.log(infoProduct);
-        RenderCarrito();
 
-        renderTotal();
         localStorage.setItem('carrito', JSON.stringify(carrito));
         carrito = JSON.parse(localStorage.getItem('carrito'));
-
+        RenderCarrito();
+        calcularTotal();
         
     }
 })
@@ -136,11 +141,10 @@ mainContainerTarjetas.addEventListener('click', e => {
             console.log(carrito);
         }
         console.log(infoProduct);
-        RenderCarrito();
-
-        renderTotal();
         localStorage.setItem('carrito', JSON.stringify(carrito));
         carrito = JSON.parse(localStorage.getItem('carrito'));  
+        RenderCarrito();
+        calcularTotal();
 
     }
 })
@@ -284,7 +288,8 @@ carrito.forEach(compra => {
     });
     contadorCarrito()
 }
-renderTotal()
+// renderTotal()
 RenderCarrito();
 contadorCarrito();
+calcularTotal();
 

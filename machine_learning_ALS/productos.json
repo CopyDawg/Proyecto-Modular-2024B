@@ -1,0 +1,268 @@
+[
+    {
+        "id": 1,
+        "nombre": "SANSEVIERIA",
+        "precio": 140.0,
+        "descripcion": "Bonita y elegante, quedar\u00e1 ideal en la decoraci\u00f3n interior de tu hogar",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 2,
+        "nombre": "CROT\u00d3",
+        "precio": 250.0,
+        "descripcion": "Es una de las plantas de interior que posee la mayor gama de colores vivos en sus hojas, requiere mucha luz",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 3,
+        "nombre": "HELECHO BOSTON",
+        "precio": 180.0,
+        "descripcion": "Un bello ejemplar, de f\u00e1cil mantenimiento y destacada capacidad para purificar el ambiente",
+        "categoria": "Plantas Purificadoras"
+    },
+    {
+        "id": 4,
+        "nombre": "ECHEVERIA",
+        "precio": 140.0,
+        "descripcion": "La m\u00e1s bella de las suculentas con el m\u00e1s d\u00f3cil de los cuidados",
+        "categoria": "Suculentas"
+    },
+    {
+        "id": 5,
+        "nombre": "ECHEVERIA GOLD",
+        "precio": 200.0,
+        "descripcion": "Tu especie favorita de suculenta con un color sumamente especial",
+        "categoria": "Suculentas"
+    },
+    {
+        "id": 6,
+        "nombre": "KALANCHOE",
+        "precio": 80.0,
+        "descripcion": "De luz abundante y riego moderado, sus flores son un estallido de color",
+        "categoria": "Plantas de Flores"
+    },
+    {
+        "id": 7,
+        "nombre": "BEGONIA",
+        "precio": 150.0,
+        "descripcion": "Una especie que destaca por sus hermosas flores y su vistoso follaje",
+        "categoria": "Plantas de Flores"
+    },
+    {
+        "id": 8,
+        "nombre": "CACTUS MINI",
+        "precio": 45.0,
+        "descripcion": "Una peque\u00f1a muestra del reino de las cact\u00e1ceas, poco riego, \u00a1mucho sol!",
+        "categoria": "Cactus"
+    },
+    {
+        "id": 9,
+        "nombre": "MINI ROSA",
+        "precio": 50.0,
+        "descripcion": "Tipo de variedad del rosal que te fascinar\u00e1 por su tama\u00f1o y su amplia variedad de tonalidades",
+        "categoria": "Plantas de Flores"
+    },
+    {
+        "id": 10,
+        "nombre": "PEPEROM\u00cdA",
+        "precio": 130.0,
+        "descripcion": "Es una planta de interior de lo m\u00e1s decorativa, gracias a sus frondosas ramas y a sus hojas bellas y originales",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 11,
+        "nombre": "PALMA ARECA",
+        "precio": 250.0,
+        "descripcion": "Planta de interior, excelente para dar vida a tu sala de estar",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 12,
+        "nombre": "MU\u00d1ECA",
+        "precio": 240.0,
+        "descripcion": "Planta de sombra, da color a tus espacios con su tonalidad llamativa",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 13,
+        "nombre": "ORQU\u00cdDEAS",
+        "precio": 750.0,
+        "descripcion": "Una planta que resalta por su elegancia y belleza, excelente para mostrarla en tu casa o en tu oficina",
+        "categoria": "Plantas de Flores"
+    },
+    {
+        "id": 14,
+        "nombre": "CALA",
+        "precio": 350.0,
+        "descripcion": "Planta de semisombra con colores llamativos apta para tu colecci\u00f3n",
+        "categoria": "Plantas de Flores"
+    },
+    {
+        "id": 15,
+        "nombre": "ANTURIO",
+        "precio": 550.0,
+        "descripcion": "Planta de interior con una variedad de colores, es una opci\u00f3n excelente para dar vida a tu hogar",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 16,
+        "nombre": "VIOLETA",
+        "precio": 240.0,
+        "descripcion": "Planta de luz interior, una excelente opci\u00f3n si lo que buscas es tener una planta resistente y con mucho color",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 17,
+        "nombre": "ESFERA BARRO",
+        "precio": 250.0,
+        "descripcion": "Una maceta que enmarcar\u00e1 tus plantas m\u00e1s llamativas",
+        "categoria": "Macetas de Barro"
+    },
+    {
+        "id": 18,
+        "nombre": "TAZA BARRO",
+        "precio": 200.0,
+        "descripcion": "Una maceta minimalista para tu espacio",
+        "categoria": "Macetas de Barro"
+    },
+    {
+        "id": 19,
+        "nombre": "ESFERA CER\u00c1MICA",
+        "precio": 450.0,
+        "descripcion": "Una maceta perfecta para resaltar tus plantas",
+        "categoria": "Macetas de Cer\u00e1mica"
+    },
+    {
+        "id": 20,
+        "nombre": "CUBO CER\u00c1MICA",
+        "precio": 400.0,
+        "descripcion": "Dale el estilo a tu hogar con esta hermosa maceta",
+        "categoria": "Macetas de Cer\u00e1mica"
+    },
+    {
+        "id": 21,
+        "nombre": "JARDINERA BARRO",
+        "precio": 250.0,
+        "descripcion": "Jardinera de barro para los detalles minimalistas",
+        "categoria": "Macetas de barro"
+    },
+    {
+        "id": 22,
+        "nombre": "JARDINERA FIBRA DE VIDRIO",
+        "precio": 530.0,
+        "descripcion": "Jardinera elaborada con fibra de vidrio color negro",
+        "categoria": "Macetas de fibra de vidrio"
+    },
+    {
+        "id": 23,
+        "nombre": "FERTILIZANTE NITROFOSCA",
+        "precio": 250.0,
+        "descripcion": "Este fertilizante ayudar\u00e1 a que tu planta crezca saludable y tenga brotes nuevos",
+        "categoria": "Fertilizantes"
+    },
+    {
+        "id": 24,
+        "nombre": "FERTILIZANTE FLORIFIL",
+        "precio": 250.0,
+        "descripcion": "Este fertilizante potenciar\u00e1 el desarrollo de flores en tus plantas",
+        "categoria": "Fertilizantes"
+    },
+    {
+        "id": 25,
+        "nombre": "SISTEMA DE RIEGO",
+        "precio": 950.0,
+        "descripcion": "Es una herramienta que te permitir\u00e1 regar de manera f\u00e1cil y pr\u00e1ctica hasta 30m de distancia",
+        "categoria": "Herramientas de riego"
+    },
+    {
+        "id": 26,
+        "nombre": "KIT DE HERRAMIENTAS",
+        "precio": 550.0,
+        "descripcion": "Todo lo que necesitas para dar mantenimiento a tus preciadas plantas",
+        "categoria": "Herramientas de jardiner\u00eda"
+    },
+    {
+        "id": 27,
+        "nombre": "CINTUR\u00d3N DE CUERO",
+        "precio": 450.0,
+        "descripcion": "Vuelve m\u00e1s f\u00e1cil tu trabajo en la jardiner\u00eda con ayuda de este cintur\u00f3n perfecto para tus herramientas",
+        "categoria": "Accesorios de jardiner\u00eda"
+    },
+    {
+        "id": 28,
+        "nombre": "MANGUERA DE RIEGO",
+        "precio": 500.0,
+        "descripcion": "Para que tus plantas queden perfectamente regadas, utiliza nuestra manguera con soporte a pared",
+        "categoria": "Herramientas de riego"
+    },
+    {
+        "id": 29,
+        "nombre": "CACTUS ESPECIAL",
+        "precio": 90.0,
+        "descripcion": "Una variedad de cactus con flores \u00fanicas que resalta en cualquier espacio",
+        "categoria": "Cactus"
+    },
+    {
+        "id": 30,
+        "nombre": "SUCULENTA PERLA",
+        "precio": 160.0,
+        "descripcion": "Una suculenta con hojas en forma de perlas que a\u00f1aden un toque ex\u00f3tico",
+        "categoria": "Suculentas"
+    },
+    {
+        "id": 31,
+        "nombre": "CUNA DE MOIS\u00c9S",
+        "precio": 220.0,
+        "descripcion": "Planta de interior con flores blancas y hojas verdes, ideal para decorar",
+        "categoria": "Plantas de Interior"
+    },
+    {
+        "id": 32,
+        "nombre": "MACETA DE PL\u00c1STICO",
+        "precio": 80.0,
+        "descripcion": "Ligera y resistente, perfecta para cualquier tipo de planta",
+        "categoria": "Macetas de pl\u00e1stico"
+    },
+    {
+        "id": 33,
+        "nombre": "FERTILIZANTE ORG\u00c1NICO",
+        "precio": 300.0,
+        "descripcion": "Potencia el crecimiento de tus plantas de manera natural",
+        "categoria": "Fertilizantes"
+    },
+    {
+        "id": 34,
+        "nombre": "TIJERAS DE PODA",
+        "precio": 120.0,
+        "descripcion": "Herramienta indispensable para el cuidado y mantenimiento de tus plantas",
+        "categoria": "Herramientas de jardiner\u00eda"
+    },
+    {
+        "id": 35,
+        "nombre": "SOPORTE PARA PLANTAS",
+        "precio": 350.0,
+        "descripcion": "Un soporte elegante para que tus plantas luzcan a\u00fan m\u00e1s",
+        "categoria": "Accesorios de jardiner\u00eda"
+    },
+    {
+        "id": 36,
+        "nombre": "KIT DE SEMILLAS",
+        "precio": 80.0,
+        "descripcion": "Variedad de semillas para que inicies tu propio jard\u00edn",
+        "categoria": "Herramientas de jardiner\u00eda"
+    },
+    {
+        "id": 37,
+        "nombre": "ABONO DE LOMBRIZ",
+        "precio": 250.0,
+        "descripcion": "Mejora la calidad de la tierra con este abono 100% org\u00e1nico",
+        "categoria": "Fertilizantes"
+    },
+    {
+        "id": 38,
+        "nombre": "JARDINERA DE MADERA",
+        "precio": 600.0,
+        "descripcion": "Una jardinera r\u00fastica y decorativa para tus plantas",
+        "categoria": "Macetas de madera"
+    }
+]

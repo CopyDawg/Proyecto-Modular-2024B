@@ -1,8 +1,8 @@
 const containerCards = document.getElementById('container-cards');
 
 
-import {loMasPedido} from './base_Datos_CP.js'
-import {buscarloMasPedidoname} from './base_Datos_CP.js'
+import {loMasPedido} from './base_Datos.js'
+import {buscarloMasPedidoname} from './base_Datos.js'
 import {añadirCarrito} from "./base_Datos.js";
 import {contadorCarrito} from "./carritoSpan.js";
 

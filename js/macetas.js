@@ -1,8 +1,9 @@
 const containerCards = document.getElementById('container-cards');
 
 
-import {macetas} from './base_Datos_CP.js'
-import { buscarMacetasname } from './base_Datos_CP.js';
+import {macetas} from './base_Datos.js'
+import {contadorCarrito} from './carritoSpan.js'
+import { buscarMacetasName } from './base_Datos.js';
 import * as dateBase from "./base_Datos.js";
 
 const createCard = () => {
@@ -68,6 +69,7 @@ macetas.forEach(pot => {
 });
 
 containerCards.addEventListener('click', e => {
+    console.log('aqui')
     if(e.target.classList.contains('botonTarjeta') ){
         const productoTarjeta = e.target.parentElement;
         console.log(productoTarjeta);
@@ -75,9 +77,9 @@ containerCards.addEventListener('click', e => {
         // //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = (productoTarjeta.querySelector('.nombreProducto').textContent);
         console.log(infoProduct);
-        const elementoBD = buscarMacetasname(infoProduct);
+        const elementoBD = buscarMacetasName(infoProduct);
         console.log(elementoBD);
         dateBase.añadirCarrito(elementoBD);
-        
+        contadorCarrito();
     }
 });
