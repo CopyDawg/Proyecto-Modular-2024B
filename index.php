@@ -25,12 +25,57 @@
 </head>
 
 <body>
+<?php
+// Primero, definimos los datos de conexión a la base de datos
+$host = 'localhost';      // La dirección del servidor de la base de datos
+$dbname = 'PlantasReyes';    // El nombre de la base de datos
+$user = 'postgres';     // El usuario de la base de datos
+$password = 'sonic301299'; // La contraseña del usuario
+
+try {
+    // Crear una conexión a la base de datos usando PDO (PHP Data Objects)
+    $pdo = new PDO("pgsql:host=$host;port=1234;dbname=$dbname", $user, $password);
+
+    // Configuramos PDO para que lance excepciones en caso de error
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Definimos una consulta SQL para obtener los datos necesarios para el combobox
+    $sql = "SELECT * FROM categorias"; // Reemplaza 'tabla' por el nombre de la tabla y ajusta los campos según sea necesario
+
+    // Preparamos la consulta SQL
+    $stmt = $pdo->prepare($sql);
+
+    // Ejecutamos la consulta
+    $stmt->execute();
+
+    // Iniciamos el combobox en HTML
+    echo "<select name='mi_combobox'>";
+
+    // Recorremos cada fila del resultado de la consulta
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        // Por cada fila, creamos una opción en el combobox
+        // 'id' se usará como el valor de la opción y 'nombre' como el texto mostrado
+        echo "<option value='{$row['id']}'>{$row['nombre']}</option>";
+    }
+
+    // Cerramos el combobox
+    echo "</select>";
+
+} catch (PDOException $e) {
+    // Si ocurre un error en la conexión, mostramos un mensaje
+    echo "Error en la conexión: " . $e->getMessage();
+}
+
+// Finalmente, cerramos la conexión asignando null a $pdo
+$pdo = null;
+?>
+
 
     <!--Inicio del NavBar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-          <a class="title" href="/index.html">
+          <a class="title" href="/index.php">
             <h4>PLANTAS REYES</h4>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,25 +86,25 @@
           <div class="collapse navbar-collapse font-navbar" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="./pages/sobre-nosotros.html">Sobre nosotros</a>
+                <a class="nav-link" href="./pages/sobre-nosotros.php">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/catalogo.html">Catálogo de productos</a>
+                <a class="nav-link" href="./pages/catalogo.php">Catálogo de productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/pAM.html">Proyectos a medida</a>
+                <a class="nav-link" href="./pages/pAM.php">Proyectos a medida</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/contactanos.html">Contáctanos</a>
-              </li>
-    
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/CarritoDeCompras.html">Carrito de compras</a>
+                <a class="nav-link" href="./pages/contactanos.php">Contáctanos</a>
               </li>
     
               <li class="nav-item">
+                <a class="nav-link" href="./pages/CarritoDeCompras.php">Carrito de compras</a>
+              </li>
+    
               <li class="nav-item">
-                <a class="nav-link" href="./pages/CarritoDeCompras.html" id="carritoIcon">
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
                   <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
                 </a>
               </li>
@@ -69,10 +114,10 @@
                   Iniciar sesión
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./pages/login.html">Ingresa a tu cuenta</a></li>
+                  <li><a class="dropdown-item" href="./pages/login.php">Ingresa a tu cuenta</a></li>
     
                   <li>
-                    <a class="dropdown-item" href="./pages/signup.html">Regístrate</a>
+                    <a class="dropdown-item" href="./pages/signup.php">Regístrate</a>
                   </li>
     
                 </ul>
@@ -184,7 +229,7 @@
                 Estamos disponibles para responder todas tus preguntas y brindarte la orientación que necesitas para
                 comenzar tu proyecto.
               </p>
-              <a href="./pages/contactanos.html" class="button-pam" id="titulos">Contacto</a>
+              <a href="./pages/contactanos.php" class="button-pam" id="titulos">Contacto</a>
             </div>
           </div>
         </div>
@@ -228,10 +273,10 @@
       </div>
       <div class="col-xs-12 col-md-6 col-lg-3">
 
-        <a href="/pages/sobre-nosotros.html">
+        <a href="/pages/sobre-nosotros.php">
           <p>Nosotros</p>
         </a>
-        <a href="/pages/contactanos.html">
+        <a href="/pages/contactanos.php">
           <p>Contacto</p>
         </a>
         <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">

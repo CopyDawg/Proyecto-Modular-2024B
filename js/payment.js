@@ -41,7 +41,7 @@ form.addEventListener('submit',(event)=>{
     console.log(JSON.stringify(allData));
 
     //Enviar a la pagina de inicio si se inicia sesion exitosamente
-      //window.location.href = '../index.html';
+      //window.location.href = '../index.php';
       appendAlert('¡Gracias! Hemos guardado esta información para el envío', 'success');
   }
 })

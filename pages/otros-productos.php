@@ -18,71 +18,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
-  <script src="/js/herramientas.js" type="module" async defer></script>
-    <title>Herramientas</title>
+  <script src="/js/otros-productos.js" type="module" async defer></script>
+    <title>Plantas</title>
 </head>
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="/index.html">
-        <h4>PLANTAS REYES</h4>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="container-fluid">
+    <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
+    <a class="title" href="/index.php">
+      <h4>PLANTAS REYES</h4>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse font-navbar" id="navbarNav">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse font-navbar" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contactanos.php">Contáctanos</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="./sobre-nosotros.html">Sobre nosotros</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="./catalogo.html">Catálogo de productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pAM.html">Proyectos a medida</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contactanos.html">Contáctanos</a>
-          </li>
+        <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+            <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+          </a>
+        </li>
+        </li>
+        <li class="nav-item dropdown" id="Usuario-Estatus">
+          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Iniciar sesión
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../pages/login.php">Ingresa a tu cuenta</a></li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="./CarritoDeCompras.html">Carrito de compras</a>
-          </li>
+            <li>
+              <a class="dropdown-item" href="../pages/signup.php">Regístrate</a>
+            </li>
 
-          <li class="nav-item">
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.html" id="carritoIcon">
-              <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
-            </a>
-          </li>
-          </li>
-          <li class="nav-item dropdown" id="Usuario-Estatus">
-            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Iniciar sesión
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../pages/login.html">Ingresa a tu cuenta</a></li>
+          </ul>
+        </li>
 
-              <li>
-                <a class="dropdown-item" href="../pages/signup.html">Regístrate</a>
-              </li>
-
-            </ul>
-          </li>
-
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
     <!--fin del navbar-->
     <div class="fondo d-flex justify-content-left align-items-center">
       <div class="col-4 align-items-center">
-        <div id="header">Herramientas</div>
+        <div id="header">Otros productos</div>
       </div>
     </div>
   
@@ -96,7 +94,7 @@
     <div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
         <div class="col-md-12">
             <div class="border border-0 text-center"><br>
-                <div id="barra"><b>¡Descubre herramientas imperdibles para tu jardín!</b>
+                <div id="barra"><b>Descubre herramientas imperdibles para tu jardín</b>
                 </div><br>
             </div>
         </div>
@@ -115,25 +113,25 @@
         <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-3">
-        <a href="/pages/sobre-nosotros.html"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.html"><p>Contacto</p></a>
+        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
+        <a href="/pages/contactanos.php"><p>Contacto</p></a>
         <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Términos y condiciones</p>
+        <p>Terminos y condiciones</p>
         <p>Preguntas frecuentes</p>
         <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-3">
         <p>Aviso de privacidad</p>
-        <p>Envíos, pagos y devoluciones</p>
+        <p>Envios, pagos y devoluciones</p>
         <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
       </div>
-    </div>-->
+    </div>
   
-  </div>
-  <script src="/js/carritoSpan.js" type="module" async defer></script>
-  <script src="/js/UserStatus.js"></script>
+  </div>-->
   <!--final footer-->
+  <script src="/js/carritoSpan.js" type="module"></script>
+  <script src="/js/UserStatus.js"></script>
 </body>
 </html>

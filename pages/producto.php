@@ -27,7 +27,7 @@
   <nav id="navbar" class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <div class="logo">
-        <a class="navbar-brand" href="/index.html">
+        <a class="navbar-brand" href="/index.php">
           <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="30" height="24">
         </a>
       </div>
@@ -38,16 +38,16 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./contactanos.html">Contactanos</a>
+            <a class="nav-link active" aria-current="page" href="./contactanos.php">Contactanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./sobre-nosotros.html">Acerca De Nosotros</a>
+            <a class="nav-link active" aria-current="page" href="./sobre-nosotros.php">Acerca De Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./pAM.html">Proyecto A La Medida</a>
+            <a class="nav-link active" aria-current="page" href="./pAM.php">Proyecto A La Medida</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./catalogo.html">Catalogo De Productos</a>
+            <a class="nav-link active" aria-current="page" href="./catalogo.php">Catalogo De Productos</a>
           </li>
 
           <!--menu desplegable-->
@@ -56,8 +56,8 @@
               Iniciar Sesion
             </a>
             <ul id="dropdown" class="dropdown-menu">
-              <li><a class="dropdown-item" href="./login.html">Iniciar sesion</a></li>
-              <li><a class="dropdown-item" href="./signup.html">registrate</a></li>
+              <li><a class="dropdown-item" href="./login.php">Iniciar sesion</a></li>
+              <li><a class="dropdown-item" href="./signup.php">registrate</a></li>
             </ul>
           </li>
 

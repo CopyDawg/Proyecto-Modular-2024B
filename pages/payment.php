@@ -17,7 +17,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid" id="navbar-container">
       <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="/index.html">
+      <a class="title" href="/index.php">
         <h4>PLANTAS REYES</h4>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -28,23 +28,23 @@
       <div class="collapse navbar-collapse font-navbar" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/sobre-nosotros.html">Sobre nosotros</a>
+            <a class="nav-link" href="/pages/sobre-nosotros.php">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/catalogo.html">Catálogo de productos</a>
+            <a class="nav-link" href="/pages/catalogo.php">Catálogo de productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/pAM.html">Proyectos a medida</a>
+            <a class="nav-link" href="/pages/pAM.php">Proyectos a medida</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/contactanos.html">Contáctanos</a>
+            <a class="nav-link" href="/pages/contactanos.php">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.html">Carrito de compras</a>
+            <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
           </li>
           <li class="nav-item">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.html" id="carritoIcon">
+            <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
               <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito">
             </a>
           </li>
@@ -54,10 +54,10 @@
               Iniciar sesión
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/login.html">Ingresa a tu cuenta</a></li>
+              <li><a class="dropdown-item" href="/pages/login.php">Ingresa a tu cuenta</a></li>
 
               <li>
-                <a class="dropdown-item" href="/pages/signup.html">Regístrate</a>
+                <a class="dropdown-item" href="/pages/signup.php">Regístrate</a>
               </li>
             </ul>
           </li>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <!--Link al Log In-->
-                <a class="d-block text-center mt-2 small text-decoration-none" a href="./login.html">¿Ya tienes una cuenta? Inicia sesión</a> 
+                <a class="d-block text-center mt-2 small text-decoration-none" a href="./login.php">¿Ya tienes una cuenta? Inicia sesión</a> 
                 <hr class="my-4">
 
                 <!-- <div class="d-grid mb-2">
@@ -265,7 +265,7 @@
            //         // const element = document.getElementById('paypal-button-container');
            //         // element.innerHTML = '';
            //         // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-           //         // Or go to another URL:  actions.redirect('thank_you.html');
+           //         // Or go to another URL:  actions.redirect('thank_you.php');
            //     });
            // }
 

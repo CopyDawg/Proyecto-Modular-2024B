@@ -37,16 +37,16 @@
             <div class="collapse navbar-collapse font-navbar" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="./sobre-nosotros.html">Sobre nosotros</a>
+                        <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
                     </li>
                     <li class="nav-item" id="pr">
-                        <a class="nav-link" href="./catalogo.html">Catálogo de productos</a>
+                        <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
                     </li>
                     <li class="nav-item" id="pr">
-                        <a class="nav-link" href="./pAM.html">Proyectos a medida</a>
+                        <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
                     </li>
                     <li class="nav-item" id="pr">
-                        <a class="nav-link" href="./contactanos.html">Contáctanos</a>
+                        <a class="nav-link" href="./contactanos.php">Contáctanos</a>
                     </li>
                     <li class="nav-item" id="pr">
                         <a class="nav-link" href="./CarritoDeCompras">Carrito de compras</a>
@@ -130,7 +130,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">CATALOGO DE PRODUCTOS</h5>
                                     <p class="card-text-align-center" id="cardabajo">Ver catalogo de productos.</p>
-                                    <a href="./EdicionCatalogo.html" id="button" class="btn btn-primary">Ir</a>
+                                    <a href="./EdicionCatalogo.php" id="button" class="btn btn-primary">Ir</a>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@ form.addEventListener('submit',(event)=>{
 
     localStorage.setItem('UserStatus', "true");
     //Enviar a la pagina de inicio si se inicia sesion exitosamente
-      window.location.href = '../index.html';
+      window.location.href = '../index.php';
 
   } else if(!regexPassword.test(inputPassword.value) && !regexEmail.test(inputEmail.value)){
     

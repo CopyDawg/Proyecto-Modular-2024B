@@ -29,7 +29,7 @@
       <div class="container-fluid">
         <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
 
-        <a class="title" href="../index.html">
+        <a class="title" href="../index.php">
           <h4>PLANTAS REYES</h4>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,26 +41,26 @@
           <ul class="navbar-nav">
 
             <li class="nav-item">
-              <a class="nav-link" href="./sobre-nosotros.html">Sobre nosotros</a>
+              <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./catalogo.html">Catálogo de productos</a>
+              <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pAM.html">Proyectos a medida</a>
+              <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contactanos.html">Contáctanos</a>
+              <a class="nav-link" href="./contactanos.php">Contáctanos</a>
             </li>
   
             <li class="nav-item">
 
-              <a class="nav-link" href="./pages/CarritoDeCompras.html">Carrito de compras</a>
+              <a class="nav-link" href="./pages/CarritoDeCompras.php">Carrito de compras</a>
             </li>
   
             <li class="nav-item">
             <li class="nav-item">
-              <a class="nav-link" href="./pages/CarritoDeCompras.html" id="carritoIcon">
+              <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
                 <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
               </a>
             </li>
@@ -70,10 +70,10 @@
                 Iniciar sesión
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../pages/login.html">Ingresa a tu cuenta</a></li>
+                <li><a class="dropdown-item" href="../pages/login.php">Ingresa a tu cuenta</a></li>
   
                 <li>
-                  <a class="dropdown-item" href="../pages/signup.html">Regístrate</a>
+                  <a class="dropdown-item" href="../pages/signup.php">Regístrate</a>
                 </li>
   
               </ul>
@@ -100,7 +100,7 @@
   <div class="container">
   <div class="row">  <!-- row-cols-1 row-cols-md-3 g-4-->
     <div class="col">
-      <a href="/pages/plantas.html">
+      <a href="/pages/plantas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Plantas.png" class="card-img-top" alt="Plantas">
         <div class="card-body">
@@ -110,7 +110,7 @@
       </div>
     </div>
     <div class="col">
-      <a href="/pages/macetas.html">
+      <a href="/pages/macetas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Accesorios (2).jpg" class="card-img-top" alt="Accesorios">
         <div class="card-body">
@@ -121,7 +121,7 @@
     </div>
     <div class="col">
 
-      <a href="/pages/herramientas.html">
+      <a href="/pages/herramientas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Guiasdecuidado (2).png" class="card-img-top" alt="rip">
         <div class="card-body">
@@ -146,7 +146,7 @@
   </div>
   
   <div class="row">
-    <div class="col text-center" id="final-text">¿No encuentras lo que buscas? Echa un vistazo a <a href="./pAM.html" class="link">Proyectos a la Medida</a>
+    <div class="col text-center" id="final-text">¿No encuentras lo que buscas? Echa un vistazo a <a href="./pAM.php" class="link">Proyectos a la Medida</a>
     </div>
   </div>
 
@@ -158,8 +158,8 @@
     </div>
     <div class="col-xs-12 col-md-6 col-lg-3">
 
-      <a href="/pages/sobre-nosotros.html"><p>Nosotros</p></a>
-      <a href="/pages/contactanos.html"><p>Contacto</p></a>
+      <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
+      <a href="/pages/contactanos.php"><p>Contacto</p></a>
       <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
     </div>
     <div class="col-xs-12 col-md-6 col-lg-3">

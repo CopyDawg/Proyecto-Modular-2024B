@@ -8,7 +8,7 @@ function actualizacion () {
     console.log(usuarioEstatus);
 
     if(ActualizacionEstatus){
-        usuarioEstatus.innerHTML = '<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">ElIso</a><ul class="dropdown-menu"><li id="Primer-Estatus"><a class="dropdown-item" href="/pages/admin.html">Perfil</a></li><li class="Segundo-Estatus"><a class="dropdown-item" href="#" onclick="CerrarSesion()">Cerrar Sesion</a></li></ul>'; 
+        usuarioEstatus.innerHTML = '<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">ElIso</a><ul class="dropdown-menu"><li id="Primer-Estatus"><a class="dropdown-item" href="/pages/admin.php">Perfil</a></li><li class="Segundo-Estatus"><a class="dropdown-item" href="#" onclick="CerrarSesion()">Cerrar Sesion</a></li></ul>'; 
     } 
 }
 
@@ -17,6 +17,6 @@ actualizacion();
 function CerrarSesion(){
     localStorage.setItem('UserStatus', "false");
     console.log(JSON.parse(localStorage.getItem('UserStatus')));
-    window.location.href = '../index.html';
+    window.location.href = '../index.php';
 }
 
