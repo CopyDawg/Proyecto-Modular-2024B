@@ -12,6 +12,7 @@
   
     <title>Iniciar sesión</title>
 </head>
+
 <body>
 
 <!-- Inicia Navbar -->
@@ -154,6 +155,25 @@
     </div>
   </div>-->
 <!--___________________________________________FIN PIE DE PAGINA___________________________________________-->
+
+ <!--inicio footer-->
+ <div id="footer" class="container-fluid">
+  <div class="row p-5">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2>¡Gracias por confiar en nosotros!</h2>
+    </div>
+    <!-- Columna con los detalles de contacto y redes sociales -->
+    <div class="col-6 text-left">
+      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+    </div>
+    <!-- Columna derecha con Facebook -->
+    <div class="col-3 text-right">
+      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
+    </div>
+  </div>
+</div>
+<!--final footer-->
 
 <!-- Scripts -->
   <script src="../js/loginData.js"></script>

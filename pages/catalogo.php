@@ -26,16 +26,15 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-
-        <a class="title" href="../index.php">
-          <h4>PLANTAS REYES</h4>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container-fluid">
+    <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
+    <a class="title" href="/index.php">
+      <h4>PLANTAS REYES</h4>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   
         <div class="collapse navbar-collapse font-navbar" id="navbarNav">
           <ul class="navbar-nav">
@@ -84,13 +83,30 @@
     </nav>
     <!--fin del navbar-->
     
-     <!--header-->
-  <div class="fondo d-flex justify-content-left align-items-center">
-    <div class="col-4 align-items-center">
-      <div id="header">Catálogo de Productos</div>
+     
+  <!-- Header -->
+  <div class="fondo d-flex justify-content-center align-items-center" style="background-color: #576e4c; padding: 20px;">
+  <div class="border border-0 text-center" style="margin: 0;">
+    <div id="header" style="font-size: 30px; font-weight: bold; color: #ffffff; text-align: center;">
+      Catálogo de Productos
     </div>
   </div>
-      <!--fin del header-->
+</div>
+<!-- Fin Header -->
+
+ <!--Inicio de Catalogo-->
+
+    <br>
+    <p class="card-text text-center" id="parrafo-pam">
+    ¡Encuentra Todo lo Que Necesitas para Tu Jardín! <br>
+En Plantas Reyes, nos esforzamos por ofrecerte una amplia variedad de productos que complementen el cuidado de tu jardín:<br>
+ desde herramientas de jardinería hasta macetas y accesorios decorativos.
+    </p>
+  
+</div>
+
+     
+  <!-- Final de Catalogo->
 
 
   <!-- Inicio tarjetas -->
@@ -100,7 +116,7 @@
   <div class="container">
   <div class="row">  <!-- row-cols-1 row-cols-md-3 g-4-->
     <div class="col">
-      <a href="/pages/plantas.php">
+      <a href="plantas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Plantas.png" class="card-img-top" alt="Plantas">
         <div class="card-body">
@@ -110,7 +126,7 @@
       </div>
     </div>
     <div class="col">
-      <a href="/pages/macetas.php">
+      <a href="macetas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Accesorios (2).jpg" class="card-img-top" alt="Accesorios">
         <div class="card-body">
@@ -121,7 +137,7 @@
     </div>
     <div class="col">
 
-      <a href="/pages/herramientas.php">
+      <a href="herramientas.php">
       <div class="card shadow p-3 mb-3 bg-body rounded" id="tarjetas">
         <img src="../assets/images/Guiasdecuidado (2).png" class="card-img-top" alt="rip">
         <div class="card-body">
@@ -135,7 +151,7 @@
  
   <!-- Final tarjetas -->
   <div class="row">
-    <h2 class="subtitle">Lo más pedido...</h2>
+    <h2 class="subtitle">¿Buscas algo más grande?</h2>
   </div>
 
   <!-- Product cards-->
@@ -150,37 +166,50 @@
     </div>
   </div>
 
-  <!--inicio footer
+<!--inicio footer-->
 <div id="footer" class="container-fluid">
   <div class="row p-5">
-    <div class="col-xs-12 col-md-6 col-lg-3">
-      <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2>¡Gracias por confiar en nosotros!</h2>
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-
-      <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-      <a href="/pages/contactanos.php"><p>Contacto</p></a>
-      <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
+    <!-- Columna con los detalles de contacto y redes sociales -->
+    <div class="col-6 text-left">
+      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-
-      <p>Términos y condiciones</p>
-      <p>Preguntas frecuentes</p>
-      <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-      <p>Aviso de privacidad</p>
-
-      <p>Envíos, pagos y devoluciones</p>
-      <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
+    <!-- Columna derecha con Facebook -->
+    <div class="col-3 text-right">
+      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
     </div>
   </div>
-
-</div>-->
+</div>
 <!--final footer-->
+
+
+
 <script src="/js/carritoSpan.js" type="module" async defer></script>
 <script src="/js/UserStatus.js"></script>
 
 </body>
 
 </html>
+
+<style>
+  #footer {
+    background-color: #587742;  /* Color de fondo */
+    padding: 2rem 0;  /* Espaciado superior e inferior */
+  }
+
+  #footer h2 {
+    font-size: 2.5rem;  /* Tamaño grande para el mensaje principal */
+    color: #fffff1;  /* Color del texto */
+    margin-bottom: 1rem;
+  }
+
+  #footer p {
+    font-size: 1rem;  /* Tamaño pequeño para los detalles */
+    color: #fffff1;  /* Color gris para los textos más pequeños */
+    margin: 0.5rem 0;
+  }
+
+</style>

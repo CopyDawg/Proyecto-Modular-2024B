@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles/catalogo.css">
-  <link rel="stylesheet" href="/styles/Navbar.css">
- 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Style+Script&display=swap"
     rel="stylesheet">
-  <script src="/js/herramientas.js" type="module" async defer></script>
-    <title>Herramientas</title>
+  <link rel="stylesheet" href="../styles/contactanos.css">
+  <link rel="stylesheet" href="../styles/Navbar.css">
+ 
+  <script src="../js/herramientas.js" async defer></script>
+  <title>Herramientas</title>
 </head>
 <body>
 <!-- Navbar -->
@@ -80,57 +76,161 @@
     </div>
   </nav>
     <!--fin del navbar-->
-    <div class="fondo d-flex justify-content-left align-items-center">
-      <div class="col-4 align-items-center">
-        <div id="header">Herramientas</div>
-      </div>
+    <!-- Header -->
+<div class="fondo d-flex justify-content-center align-items-center" style="background-color: #576e4c; padding: 20px;">
+  <div class="border border-0 text-center" style="margin: 0;">
+    <div id="header" style="font-size: 36px; font-weight: bold; color: #ffffff; text-align: center;">
+      Catálogo de Herramientas
     </div>
-  
-    
-    <!--<div class="row">
-      <h1 class="subtitle">Descubre herramientas imperdibles para tu jardín</h1>
-    </div>
-    -->
+  </div>
+</div>
+<!-- Fin Header -->
 
-    <!--barra con texto-->
-    <div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
-        <div class="col-md-12">
-            <div class="border border-0 text-center"><br>
-                <div id="barra"><b>¡Descubre herramientas imperdibles para tu jardín!</b>
-                </div><br>
-            </div>
+
+<!-- Barra con texto -->
+<div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
+  <div class="col-md-12">
+    <div class="border border-0 text-center"><br>
+      <div id="barra"><b>¡Disfruta de la increíble variedad que tenemos para ti!</b></div><br>
+    </div>
+  </div>
+</div>
+<!-- Fin Barra con texto -->
+
+<!-- Product cards -->
+<div class="container my-4">
+  <div class="row" id="container-cards">
+    <!-- Plant Cards -->
+    <!-- Herramienta 1-->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588311082740-88c1b480d72d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Tijeras de Podar"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Tijeras de Podar</h5>
+          <p class="card-text">Comodas y practicas.</p>
+          <p class="card-text"><strong>Precio: $120 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
         </div>
-    </div>
-        <!--fin de barra con texto-->
-  
-    <!-- Product cards-->
-    <div class="row" id="container-cards">
-      <div class="col-sm-12 container text-center"></div>
+      </div>
     </div>
 
-    <!--inicio footer
-<div id="footer" class="container-fluid">
-    <div class="row p-5">
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
+    <!-- Herramienta2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589051039495-eb77709c8268?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Rastrillo de Jardín"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Rastrillo de Jardín</h5>
+          <p class="card-text">Perfecta para esos lugares especiales.</p>
+          <p class="card-text"><strong>Precio: $190 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-        <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
+    </div>
+      <!-- Herramienta 3 -->
+      <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1535090042247-30387644aec5?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Paleta de Jardinería"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Paleta de Jardinería          </h5>
+          <p class="card-text">Especial y efectiva para mantener tu jardin precioso.</p>
+          <p class="card-text"><strong>Precio: $50 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Términos y condiciones</p>
-        <p>Preguntas frecuentes</p>
-        <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
+    </div>
+      <!-- Herramienta 4-->
+      <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1692651771569-95dd3ed878a8?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Regadera de Jardín"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Regadera de Jardín    </h5>
+          <p class="card-text">Linda y funcional.</p>
+          <p class="card-text"><strong>Precio: $80 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Aviso de privacidad</p>
-        <p>Envíos, pagos y devoluciones</p>
-        <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
+    </div>
+      <!-- Herramienta 5-->
+      <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1710361006404-a13d01802ce9?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Guantes de Jardinería"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Guantes de Jardinería          </h5>
+          <p class="card-text">Ideal para proteger tus manos.</p>
+          <p class="card-text"><strong>Precio: $115 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
       </div>
-    </div>-->
-  
+    </div>
+
+      <!-- Herramienta 6 -->
+      <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Tierra"
+        style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Tierra</h5>
+          <p class="card-text">Fértil y lista para nutrir tus plantas.</p>
+          <p class="card-text"><strong>Precio: $20 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+
+
+    
+<!-- Inicio Footer -->
+<div id="footer" class="container-fluid" style="background-color: #8FBC8F; color: #ffffff; padding: 20px;">
+  <div class="row">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</h2>
+    </div>
+
+    <!-- Columna izquierda con detalles de contacto -->
+    <div class="col-md-4 text-left">
+      <p style="font-size: 1.2rem; margin-bottom: 5px;"><i class="bi bi-telephone-fill"></i> Teléfono: 55 5275 0932</p>
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">
+        <a href="/pages/sobre-nosotros.php" style="text-decoration: none; color: #ffffff;"><i class="bi bi-info-circle-fill"></i> Sobre Nosotros</a>
+      </p>
+    </div>
+
+    <!-- Columna central con redes sociales -->
+    <div class="col-md-4 text-center">
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">Síguenos en:</p>
+      <a href="https://www.facebook.com/p/Plantas-Reyes-100088890480708/?locale=es_LA" target="_blank" style="margin-right: 10px;">
+        <img src="./asset/icons/facebook.png" alt="Facebook" width="30px" height="30px">
+        
+      </a>
+     
+      <a href="https://www.instagram.com/ernestogabrielreyesmaulen?igsh=MTFibW1vZnU4dWozbw==" target="_blank" style="margin-right: 10px;">
+        <img src="./assets/icons/ig.png" alt="Instagram" width="30px" height="30px">
+      </a>
+    
+
+    <!-- Columna derecha con otra información -->
+    <div class="col-md-4 text-right">
+      <p style="font-size: 1.2rem; margin-bottom: 5px;"><i class="bi bi-correo"></i> Correo: martinreyese27@gmail.com</p>
+    </div>
+  </div>
+</div>
+<!-- Fin Footer -->
+
+
   </div>
   <script src="/js/carritoSpan.js" type="module" async defer></script>
   <script src="/js/UserStatus.js"></script>

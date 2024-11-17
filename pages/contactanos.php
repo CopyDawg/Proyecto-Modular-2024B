@@ -62,7 +62,7 @@
             Iniciar sesión
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../pages/login.php">Ingresa a tu cuenta</a></li>
+            <li><a class="dropdown-item" href="login.php">Ingresa a tu cuenta</a></li>
 
             <li>
               <a class="dropdown-item" href="../pages/signup.php">Regístrate</a>
@@ -99,10 +99,10 @@
 
           <div class="card-body p-4 p-sm-5">
             <h1 id="Registrate_titulo">PLANTAS REYES</h1>
-            <h5 id="plantasReyes1" style="text-align: left;">Datos de contacto:</h5>
-            <h5 class="texto" id="telefono" style="text-align: left;">Telefono:5583xxxxxx</h5>
-            <h5 class="texto" id="correo" style="text-align: left;">Correo:administracion@plantasreyes.com </h5>
-            <h5 class="texto" id="direccion" style="text-align: left;">Direccion: Sauce 6, san jose de los cedros. cuajimalpa
+            <h5 id="plantasReyes1" style="text-align: left;"></h5>
+            <h5 class="texto" id="telefono" style="text-align: left;">Telefono: 55 5275 0932</h5>
+            <h5 class="texto" id="correo" style="text-align: left;">Correo: martinreyese27@gmail.com </h5>
+            <h5 class="texto" id="direccion" style="text-align: left;">Dirección: Sauce 6, San Jose de los cedros. cuajimalpa
               de morelos C.P: 05200 CDMX.</h5>
               <br>
             <h5 class="card-title text-center mb-5 fw-light " id="Registrate_titulo">¿Quieres mandarnos comentarios?</h5>
@@ -167,29 +167,24 @@
   </div>
 
 
-  <!--DIV ICONOS DE REDES SOCIALES
-  <div id="footer" class="container-fluid">
-    <div class="row p-5">
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <img src="../assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-        <img src="../assets/icons/facebook.png" alt="facebook" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Términos y condiciones</p>
-        <p>Preguntas frecuentes</p>
-        <img src="../assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Aviso de privacidad</p>
-        <p>Envíos, pagos y devoluciones</p>
-        <img src="../assets/icons/github.png" alt="github" id="iconos-redes">
-      </div>
+<!--inicio footer-->
+<div id="footer" class="container-fluid">
+  <div class="row p-5">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2>¡Gracias por confiar en nosotros!</h2>
     </div>
-  </div>-->
+    <!-- Columna con los detalles de contacto y redes sociales -->
+    <div class="col-6 text-left">
+      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+    </div>
+    <!-- Columna derecha con Facebook -->
+    <div class="col-3 text-right">
+      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
+    </div>
+  </div>
+</div>
+<!--final footer-->
 
 
 

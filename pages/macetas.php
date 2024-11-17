@@ -1,145 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles/catalogo.css">
-  <link rel="stylesheet" href="/styles/Navbar.css">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Style+Script&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="../styles/contactanos.css">
+  <link rel="stylesheet" href="../styles/Navbar.css">
+
   <script src="/js/macetas.js" type="module" async defer></script>
   <title>Macetas</title>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-        <a class="title" href="/index.php">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
+      <a class="title" href="/index.php">
+        <h4>PLANTAS REYES</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <h4>PLANTAS REYES</h4>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse font-navbar" id="navbarNav">
-          <ul class="navbar-nav">
+      <div class="collapse navbar-collapse font-navbar" id="navbarNav">
+        <ul class="navbar-nav">
 
-            <li class="nav-item">
-              <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contactanos.php">Contáctanos</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
+          </li>
 
-            </li>
-  
-            <li class="nav-item">
-            <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactanos.php">Contáctanos</a>
+          </li>
 
-              <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+          <li class="nav-item">
+            <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
+          </li>
 
-                <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
-              </a>
-            </li>
-            </li>
-            <li class="nav-item dropdown" id="Usuario-Estatus">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Iniciar sesión
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../pages/login.php">Ingresa a tu cuenta</a></li>
-  
-                <li>
-                  <a class="dropdown-item" href="../pages/signup.php">Regístrate</a>
-                </li>
-  
-              </ul>
-            </li>
-  
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+              <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+            </a>
+          </li>
+          </li>
+          <li class="nav-item dropdown" id="Usuario-Estatus">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Iniciar sesión
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../pages/login.php">Ingresa a tu cuenta</a></li>
+
+              <li>
+                <a class="dropdown-item" href="../pages/signup.php">Regístrate</a>
+              </li>
+
+            </ul>
+          </li>
+
+      </div>
+    </div>
+  </nav>
+    <!--fin del navbar-->
+   <!-- Header -->
+<div class="fondo d-flex justify-content-center align-items-center" style="background-color: #576e4c; padding: 20px;">
+  <div class="border border-0 text-center" style="margin: 0;">
+    <div id="header" style="font-size: 36px; font-weight: bold; color: #ffffff; text-align: center;">
+      Catálogo de Macetas
+    </div>
+  </div>
+</div>
+<!-- Fin Header -->
+
+
+<!-- Barra con texto -->
+<div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
+  <div class="col-md-12">
+    <div class="border border-0 text-center"><br>
+      <div id="barra"><b>¡Explora la variedad de tamaños de macetas para tu lugar especial!</b></div><br>
+    </div>
+  </div>
+</div>
+<!-- Fin Barra con texto -->
+
+<!-- Product cards -->
+<div class="container my-4">
+  <div class="row" id="container-cards">
+    <!-- Plant Cards -->
+      
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1710900831573-4c86cecd6fc4?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        class="card-img-top" alt="Maceta1"
+        style="width: 355px; height: 450px;">
+        <div class="card-body;">
+          <h5 class="card-title">Maceta de Cerámica Blanca </h5>
+          <p class="card-text">Ideal para mantener el ambiente del hogar.</p>
+          <p class="card-text"><strong>Precio: $120 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
         </div>
       </div>
-    </nav>
-    <!--fin del navbar-->
-
-  <div class="fondo d-flex justify-content-left align-items-center">
-    <div class="col-4 align-items-center">
-      <div id="header">Macetas</div>
     </div>
-  </div>
 
-  
-  <!--barra con texto-->
-  <div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
-    <div class="col-md-12">
-        <div class="border border-0 text-center"><br>
-            <div id="barra"><b>¡Disfruta de la increíble variedad que tenemos para ti!</b>
-
-            </div><br>
+    <!-- Maceta2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1708743143274-ab820c191d97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFjZXRhJTIwY29sZ2FudGV8ZW58MHx8MHx8fDI%3D"
+         class="card-img-top" alt="Maceta2"
+         style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Maceta Colgante  </h5>
+          <p class="card-text">Ofrece una vibra diferente para tu jardín.</p>
+          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
         </div>
+      </div>
     </div>
+        <!-- Maceta 3 -->
+        <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1678912442403-e783a4f593ba?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         class="card-img-top" alt="Maceta3"
+         style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Maceta  de Plástico</h5>
+          <p class="card-text"> Para transplantar y transportar tus plantas.</p>
+          <p class="card-text"><strong>Precio: $100 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+ <!-- Maceta 4 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1679093464714-f3af9620c4de?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         class="card-img-top" alt="Maceta4"
+         style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title">Maceta de Madera Natural</h5>
+          <p class="card-text">Perfecta para embellecer cualquier lugar y darle estilo lujoso.</p>
+          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+    
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+     <!-- Maceta 5 -->
+     <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1700751615345-0e86e04bb424?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         class="card-img-top" alt="Maceta5"
+         style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title"> Maceta Gigante        </h5>
+          <p class="card-text">Ideal para estas plantas especiales.</p>
+          <p class="card-text"><strong>Precio: $300 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rosas Rojas -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589711076926-9838bffba23d?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         class="card-img-top" alt="Maceta6s"
+         style="width: 355px; height: 450px;">
+        <div class="card-body">
+          <h5 class="card-title"> Maceta Mini </h5>
+          <p class="card-text">Encaja a la perfeccion en cualquier lugar. </p>
+          <p class="card-text"><strong>Precio: $30 MXN</strong></p>
+          <button class="btn btn-success">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Add more plants as necessary -->
+  </div>
 </div>
-    <!--fin de barra con texto-->
 
-  <!-- Product cards-->
-  <div class="row" id="container-cards">
-    <div class="col-sm-12 container text-center align-items-center"></div>
-  </div>
-
-
-  <!--inicio footer
-<div id="footer" class="container-fluid">
-  <div class="row p-5">
-    <div class="col-xs-12 col-md-6 col-lg-3">
-      <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-
-      <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-      <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-
-      <p>Términos y condiciones</p>
-
-      <p>Preguntas frecuentes</p>
-      <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-3">
-      <p>Aviso de privacidad</p>
-
-      <p>Envíos, pagos y devoluciones</p>
-      <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
-    </div>
-  </div>
-
-</div>-->
-<!--final footer-->
 
 <script src="/js/carritoSpan.js" type="module"></script>
 <script src="/js/UserStatus.js"></script>

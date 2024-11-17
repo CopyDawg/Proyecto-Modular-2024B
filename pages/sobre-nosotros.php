@@ -25,15 +25,15 @@
 
 <body> <!-- Inicia Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="/index.php">
-        <h4>PLANTAS REYES</h4>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="container-fluid">
+    <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
+    <a class="title" href="/index.php">
+      <h4>PLANTAS REYES</h4>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
       <div class="collapse navbar-collapse font-navbar" id="navbarNav">
         <ul class="navbar-nav">
@@ -180,7 +180,14 @@
   <div class="col">
     <div class="container" id="valuesContainer">
       <div class="card" id="valuesCard">
-        <div class="front" style="background-image: url(/assets/images/Imagen\ Transpariencia.png);"></div>
+        <div class="front" style="background-image: url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 300px;">
+</div>
+
+
         <div class="back">
           <p id="texto">Nos comprometemos a ser abiertos y directos en todas nuestras actividades,
             brindando a nuestros clientes información clara y precisa sobre nuestros procesos, abastecimiento,
@@ -208,7 +215,11 @@
   <div class="col">
     <div class="container" id="valuesContainer">
       <div class="card" id="valuesCard">
-        <div class="front" style="background-image: url(https://media.gettyimages.com/id/157428172/es/foto/bajo-techo-en-el-jard%C3%ADn-de-hierbas-planta-flor-ollas-por-alf%C3%A9izar.jpg?s=612x612&w=gi&k=20&c=vGIC8s1d1SaY2RlOrT3zu5fmxPyCnWoetkO3RoUwUA4=);"></div>
+        <div class="front" style="background-image: url(https://plus.unsplash.com/premium_photo-1677756430603-f081a25b0aa7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+         background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 300px;"></div>
         <div class="back">
           <p id="texto">Crear un entorno de respeto y confianza con nuestros clientes para de esta
             forma garantizar un servicio de calidad y claridad donde exista la confianza de compartirnos su
@@ -236,7 +247,11 @@
   <div class="col">
     <div class="container" id="valuesContainer">
       <div class="card" id="valuesCard">
-        <div class="front" style="background-image: url(https://media.istockphoto.com/id/1339902346/photo/a-young-african-american-family-sitting-on-the-couch-at-home-while-using-tablet.jpg?s=612x612&w=is&k=20&c=PggFii1U3Nhdyg3uaujAdhcZ5e2z3gPLXHa6w2O7Djc=);"></div>
+        <div class="front" style="background-image: url(https://images.unsplash.com/photo-1611735341450-74d61e660ad2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 300px; " 
+  ></div>
         <div class="back">
           <p id="texto">Creemos en el poder de las plantas para inspirar y mejorar nuestras vidas.
             Nos esforzamos por brindar a nuestros clientes información y recursos educativos que les permitan
@@ -266,34 +281,24 @@
 </div>
 <br><br><br>
 
-  <!--___________________________________________INICIO PIE DE PAGINA___________________________________________
-  <div id="footer" class="container-fluid">
-    <div class="row p-5">
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-
-        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-        <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Términos y condiciones</p>
-
-        <p>Preguntas frecuentes</p>
-        <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Aviso de privacidad</p>
-
-        <p>Envíos, pagos y devoluciones</p>
-
-        <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
-      </div>
+<!--inicio footer-->
+<div id="footer" class="container-fluid">
+  <div class="row p-5">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2>¡Gracias por confiar en nosotros!</h2>
     </div>
-
-  </div>-->
+    <!-- Columna con los detalles de contacto y redes sociales -->
+    <div class="col-6 text-left">
+      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+    </div>
+    <!-- Columna derecha con Facebook -->
+    <div class="col-3 text-right">
+      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
+    </div>
+  </div>
+</div>
+<!--final footer-->
 
   <script src="../js/carritoSpan.js" type="module"></script>
   <script src="../js/UserStatus.js"></script>

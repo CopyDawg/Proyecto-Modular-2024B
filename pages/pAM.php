@@ -21,14 +21,29 @@
     rel="stylesheet">
   <title>Proyectos a Medida</title>
 </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Style+Script&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/contactanos.css">
+  <link rel="stylesheet" href="../styles/Navbar.css">
+ 
+  <script src="../js/contacto.js" async defer></script>
+  <title>Proyectos a Medida</title>
+</head>
 <body>
 
   <!-- Inicia Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="/index.php">
+      <a class="title" href="index.php">
         <h4>PLANTAS REYES</h4>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -87,21 +102,22 @@
     <div class="misionVision d-flex justify-content-md-center">
       <div class="card mb-3 border-0" style="max-width: 1000px;" id="pam-con">
         <div class="row g-0">
-          <div class="col-md-4" id="pam-con">
-            <img src="/assets/images/pam Plantas.png" class="img-fluid rounded-start" alt="Imagen PAM">
+         <div class="front" style="background-image: url(https://images.unsplash.com/photo-1531058240690-006c446962d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+         background-size: cover;  width: 100%;  height: 500px; ">
           </div>
           <div class="col-md-2" id="pam-con"></div>
-          <div class="contenedor-texto d-flex align-items-center col-md-6" id="pam-con">
-            <div class="card-body">
-              <h1 class="titles card-title text-center" id="titulos">Proyectos a medida</h1>
-              <br>
-              <p class="card-text text-center" id="parrafo-pam">Siéntete mejor en tus espacios
-                favoritos rodeado de plantas!
-                Con Plantas Reyes, te ofrecemos asesoría especializada y propuestas personalizadas
-                para que puedas tener las plantas y macetas adecuadas en tus espacios más queridos.
-              </p>
-            </div>
-          </div>
+
+  <div class="card-body">
+    <h1 class="titles card-title text-center" id="titulos">Proyectos a medida</h1>
+    <br>
+    <p class="card-text text-center" id="parrafo-pam">
+                  ¡Siéntete mejor en tus espacios favoritos rodeado de plantas! <br>
+                  Con Plantas Reyes, te ofrecemos asesoría especializada y propuestas personalizadas
+                  para que puedas tener las plantas y macetas adecuadas en tus espacios más queridos.
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
@@ -128,23 +144,23 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card shadow p-3 mb-5 bg-body rounded" style="height:500px">
-              <img src="/assets/images/Plantas oficina.png" class="card-img-top" alt="Plantas" style="height:425px">
-              <div class="card-body">
+            <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Plantas" style="height:425px;">
+            <div class="card-body">
                 <h5 class="card-title" id="titulos">Oficina</h5>
               </div>
             </div>
           </div>
           <div class="col ">
             <div class="card shadow p-3 mb-5 bg-body rounded" style="height:500px">
-              <img src="/assets/images/PlantasenCasa.png" class="card-img-top" alt="Accesorios" style="height:425px">
+            <img src="https://images.unsplash.com/photo-1587564621145-2c28a6a25ee7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Plantas" style="height:425px;">
               <div class="card-body">
-                <h5 class="card-title" id="titulos">Casa</h5>
+                <h5 class="card-title" id="titulos">Hogar</h5>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card shadow p-3 mb-5 bg-body rounded " style="height:500px">
-              <img src="/assets/images/negocios-con-plantas.png" class="card-img-top" alt="rip" style="height:425px">
+            <img src="https://images.unsplash.com/photo-1559842438-2942c907c8fe?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Plantas" style="height:425px;">
               <div class="card-body">
                 <h5 class="card-title" id="titulos">Negocios</h5>
               </div>
@@ -171,6 +187,11 @@
       <div class="row row-cols-1 row-cols-md-4 g-5">
         <div class="col rounded">
           <div class="card h-100 shadow" id="cont-t">
+          <img src="https://i.pinimg.com/736x/e2/a4/fa/e2a4fa3412bd7664f1378c0d5ef3d38f.jpg"
+            class="img-fluid rounded-start d-flex container d-flex justify-content-center" 
+     alt="plantita" 
+     id="icono" 
+     style="width: 200px; height: 150px; object-fit: cover; margin-top: 12px;">
             <div class="card-body ">
               <h4 class="card-title" id="titulos">¡Contactanos!</h4>
               <p class="card-text " id="parrafo">Ya sea que prefieras comunicarte por WhatsApp o correo, estamos aquí
@@ -183,21 +204,31 @@
         </div>
         <div class="col">
           <div class="card h-100 shadow" id="cont-t">
-            <img src="/assets/icons/planta.png"
-              class="img-fluid rounded-start d-flex container d-flex justify-content-center" alt="plantita" id="icono">
+          <img src="https://images.unsplash.com/photo-1628199688008-c4bd24f493f0?q=80&w=1515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+     class="img-fluid rounded-start d-flex container d-flex justify-content-center" 
+     alt="plantita" 
+     id="icono" 
+     style="width: 200px; height: 150px; object-fit: cover; margin-top: 12px;">
+
             <div class="card-body">
+            <h4 class="card-title" id="titulos">Nuestro Equipo</h4>
               <p class="card-text" id="parrafo">Con base en una asesoría en línea o una visita a domicilio, crearemos
                 una propuesta personalizada para tu espacio.
-                Nuestro equipo de expertos tomará en cuenta tus preferencias, necesidades y estilo para diseñar una
+                Nuestro equipo de expertos tomará en cuenta tus preferencias,   necesidades y 
+                estilo para diseñar una
                 solución única y adaptada a ti.</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100 shadow" id="cont-t">
-            <img src="/assets/icons/entrega.png"
-              class="img-fluid rounded-start d-flex container d-flex justify-content-center" alt="entrega" id="icono">
+            <img src="https://images.unsplash.com/photo-1490677739661-d3395897c0a7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="img-fluid rounded-start d-flex container d-flex justify-content-center" 
+     alt="plantita" 
+     id="icono" 
+     style="width: 200px; height: 150px; object-fit: cover; margin-top:12px;">
             <div class="card-body">
+            <h4 class="card-title" id="titulos">Asesoría gratis</h4>
               <p class="card-text" id="parrafo">Plantas Reyes se encargará de la instalación en tu hogar.
                 Nuestro equipo llevará a cabo la colocación de las plantas, responderá todas tus preguntas y dejará tus
                 espacios limpios y listos para disfrutar.
@@ -207,9 +238,13 @@
         </div>
         <div class="col">
           <div class="card h-100 shadow" id="cont-t">
-            <img src="/assets/icons/planta (1).png"
-              class="img-fluid rounded-start d-flex container d-flex justify-content-center" alt="plantita1" id="icono">
+          <img src="https://images.unsplash.com/photo-1643730530591-ea80de0a79e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="img-fluid rounded-start d-flex container d-flex justify-content-center" 
+     alt="plantita" 
+     id="icono" 
+     style="width: 200px; height: 150px; object-fit: cover; margin-top: 12px;">
             <div class="card-body">
+            <h4 class="card-title" id="titulos">Cuidados</h4>
               <p class="card-text" id="parrafo">Cuando compres tus plantas con Plantas Reyes, recibirás una garantía
                 mantenimiento gratuito.
                 Queremos asegurarnos de que tus plantas se mantengan saludables y hermosas, brindándote el soporte
@@ -226,34 +261,25 @@
   <br><br><br>
   <!-- Final contactanos!-->
 
-  <!--___________________________________________INICIO PIE DE PAGINA___________________________________________
-  <div id="footer" class="container-fluid">
-    <div class="row p-5">
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <img src="/assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-        <img src="/assets/icons/facebook.png" alt="facebook" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Términos y condiciones</p>
-
-        <p>Preguntas frecuentes</p>
-        <img src="/assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Aviso de privacidad</p>
-        <p>Envíos, pagos y devoluciones</p>
-
-        <img src="/assets/icons/github.png" alt="github" id="iconos-redes">
-      </div>
+  <!--inicio footer-->
+<div id="footer" class="container-fluid">
+  <div class="row p-5">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2>¡Gracias por confiar en nosotros!</h2>
     </div>
+    <!-- Columna con los detalles de contacto y redes sociales -->
+    <div class="col-6 text-left">
+      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+    </div>
+    <!-- Columna derecha con Facebook -->
+    <div class="col-3 text-right">
+      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
+    </div>
+  </div>
+</div>
+<!--final footer-->
 
-  </div>-->
-
-  <!--___________________________________________FIN PIE DE PAGINA___________________________________________-->
   <script src="/js/carritoSpan.js" type="module"></script>
   <script src="/js/UserStatus.js"></script>
 
