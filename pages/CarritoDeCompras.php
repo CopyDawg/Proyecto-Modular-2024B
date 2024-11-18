@@ -47,12 +47,12 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
+          <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
         </li>
 
         <li class="nav-item">
         <li class="nav-item">
-          <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+          <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
             <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
           </a>
         </li>
@@ -151,14 +151,14 @@
 
 
     </div>
-    <script src="/js/carritoSpan.js" type="module"></script>
+    <script src="../js/carritoSpan.js" type="module"></script>
     <!--___________________________________________FIN PIE DE PAGINA___________________________________________-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"></script>
-    <script src="/js/carritoSpan.js" type="module"></script>
-    <script src="/js/UserStatus.js"></script>
+    <script src="../js/carritoSpan.js" type="module"></script>
+    <script src="../js/UserStatus.js"></script>
 
 </body>
 

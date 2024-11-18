@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
-  <script src="/js/catalogue-cards.js" type="module" async defer></script>
+  <script src="js/catalogue-cards.js" type="module" async defer></script>
   <link rel="stylesheet" href="./styles/catalogo.css">
   <link rel="stylesheet" href="./styles/index.css">
  
@@ -75,7 +75,7 @@ $pdo = null;
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <img class="rounded-circle" src="./assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-          <a class="title" href="/index.php">
+          <a class="title" href="./index.php">
             <h4>PLANTAS REYES</h4>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -105,7 +105,7 @@ $pdo = null;
               <li class="nav-item">
               <li class="nav-item">
                 <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
-                  <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+                  <img src="./assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
                 </a>
               </li>
               </li>
@@ -122,7 +122,7 @@ $pdo = null;
     
                 </ul>
               </li>
-    
+            </ul>
           </div>
         </div>
       </nav>

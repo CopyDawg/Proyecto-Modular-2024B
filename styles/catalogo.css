@@ -5,7 +5,7 @@ body {
 }
 
 .fondo{
-    background-image: url(/assets/images/portada-catalogo.jpg);
+    background-image: url(../assets/images/portada-catalogo.jpg);
     height: 20rem;
     background-position: center;
     background-repeat: no-repeat;

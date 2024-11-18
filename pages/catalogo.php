@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&display=swap"
     rel="stylesheet">
-  <script src="/js/catalogue-cards.js" type="module" async defer></script>
+  <script src="../js/catalogue-cards.js" type="module" async defer></script>
   <title>Catálogo de Productos</title>
 </head>
 
@@ -53,12 +53,12 @@
   
             <li class="nav-item">
 
-              <a class="nav-link" href="./pages/CarritoDeCompras.php">Carrito de compras</a>
+              <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
             </li>
   
             <li class="nav-item">
             <li class="nav-item">
-              <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
+              <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
                 <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
               </a>
             </li>
@@ -203,8 +203,8 @@ En Plantas Reyes, nos esforzamos por ofrecerte una amplia variedad de productos 
 
 
 
-<script src="/js/carritoSpan.js" type="module" async defer></script>
-<script src="/js/UserStatus.js"></script>
+<script src="../js/carritoSpan.js" type="module" async defer></script>
+<script src="../js/UserStatus.js"></script>
 
 </body>
 

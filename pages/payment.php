@@ -28,23 +28,23 @@
       <div class="collapse navbar-collapse font-navbar" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/sobre-nosotros.php">Sobre nosotros</a>
+            <a class="nav-link" href="./sobre-nosotros.php">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/catalogo.php">Catálogo de productos</a>
+            <a class="nav-link" href="./catalogo.php">Catálogo de productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/pAM.php">Proyectos a medida</a>
+            <a class="nav-link" href="./pAM.php">Proyectos a medida</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/contactanos.php">Contáctanos</a>
+            <a class="nav-link" href="./contactanos.php">Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
+            <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
           </li>
           <li class="nav-item">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+            <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
               <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito">
             </a>
           </li>
@@ -54,10 +54,10 @@
               Iniciar sesión
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/login.php">Ingresa a tu cuenta</a></li>
+              <li><a class="dropdown-item" href="./login.php">Ingresa a tu cuenta</a></li>
 
               <li>
-                <a class="dropdown-item" href="/pages/signup.php">Regístrate</a>
+                <a class="dropdown-item" href="./signup.php">Regístrate</a>
               </li>
             </ul>
           </li>
