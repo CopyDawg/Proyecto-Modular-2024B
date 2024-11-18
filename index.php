@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
-  <script src="/js/catalogue-cards.js" type="module" async defer></script>
+  <script src="js/catalogue-cards.js" type="module" async defer></script>
   <link rel="stylesheet" href="./styles/catalogo.css">
   <link rel="stylesheet" href="./styles/index.css">
  
@@ -105,7 +105,7 @@ $pdo = null;
               <li class="nav-item">
               <li class="nav-item">
                 <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
-                  <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+                  <img src="./assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
                 </a>
               </li>
               </li>
@@ -122,7 +122,7 @@ $pdo = null;
     
                 </ul>
               </li>
-    
+            </ul>
           </div>
         </div>
       </nav>

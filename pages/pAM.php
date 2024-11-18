@@ -12,8 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles/pAM.css">
-  <link rel="stylesheet" href="/styles/Navbar.css">
+  <link rel="stylesheet" href="../styles/pAM.css">
+  <link rel="stylesheet" href="../styles/Navbar.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,8 +297,8 @@
 </div>
 <!-- Fin Pie de página -->
 
-  <script src="/js/carritoSpan.js" type="module"></script>
-  <script src="/js/UserStatus.js"></script>
+  <script src="../js/carritoSpan.js" type="module"></script>
+  <script src="../js/UserStatus.js"></script>
 
 </body>
 
