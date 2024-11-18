@@ -74,7 +74,7 @@ $pdo = null;
     <!--Inicio del NavBar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
+          <img class="rounded-circle" src="./assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
           <a class="title" href="/index.php">
             <h4>PLANTAS REYES</h4>
           </a>
@@ -189,9 +189,8 @@ $pdo = null;
   <!-- Inicio del Encabezado Tarjetas-->
   <div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">
     <div class="col-md-12">
-      <div class="border border-0 text-center"><br>
-        <h1><b>¡Productos destacados!</b>
-        </h1><br>
+      <div class="border border-0 text-center" ><br>
+      <h1 style="color: #4b2e1f;"><b>¡Productos destacados!</b></h1><br>
       </div>
     </div>
   </div>
@@ -209,8 +208,8 @@ $pdo = null;
   <div class="misionVision d-flex justify-content-md-center">
     <div class="col-md-10">
       <div class="rounded-pill text-center " id="titulo-pill"><br>
-        <h1>¿Cómo se llevan a cabo los proyectos?
-        </h1><br>
+      <h1 style="color: #223b10;"><b>Transforma tu hogar con el toque mágico de la naturaleza. En Plantas Reyes, cultivamos belleza para cada rincón de tu vida."
+      </b></h1><br>
       </div>
     </div>
   </div>
@@ -218,52 +217,64 @@ $pdo = null;
   <br>
   <br>
   <div class="misionVision d-flex justify-content-md-center text-center">
-    <div class="col-md-12 ">
-      <div class="row " >
-        <div class="col rounded">
-          <div class="card h-100 shadow" id="cont-t">
-            <div class="card-body ">
-              <h4 class="card-title" id="titulos">¡Contáctanos!</h4>
-              <p class="card-text " id="parrafo">Ya sea que prefieras comunicarte por WhatsApp o correo, estamos aquí
-                para atenderte. Puedes agendar una visita a domicilio o recibir asesoría personalizada en línea.
-                Estamos disponibles para responder todas tus preguntas y brindarte la orientación que necesitas para
-                comenzar tu proyecto.
-              </p>
-              <a href="./pages/contactanos.php" class="button-pam" id="titulos">Contacto</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 shadow" id="cont-t">
-            <img src="./assets/icons/planta.png"
-              class="img-fluid rounded-start d-flex container d-flex justify-content-center" alt="plantita" id="icono">
-            <div class="card-body">
-              <p class="card-text" id="parrafo">Con base en una asesoría en línea o una visita a
-                domicilio, crearemos una propuesta personalizada para tu espacio.
-                Nuestro equipo de expertos tomará en cuenta tus preferencias, necesidades y estilo para
-                diseñar una solución única y adaptada a ti.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 shadow" id="cont-t">
-            <img src="./assets/icons/entrega.png"
-              class="img-fluid rounded-start d-flex container d-flex justify-content-center" alt="entrega" id="icono">
-            <div class="card-body">
-              <p class="card-text" id="parrafo">Plantas Reyes se encargará de la instalación en tu hogar.
-                Nuestro equipo llevará a cabo la colocación de las plantas, responderá todas tus
-                preguntas y dejará tus espacios limpios y listos para disfrutar.
-                Nos aseguraremos de que todo esté perfectamente colocado y en armonía con tu entorno.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="col-md-12">
+    <div class="row g-3"> <!-- Se agrega un espaciado entre columnas -->
       
+      <!-- Primera tarjeta -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow" id="cont-t" style="background-color: #587742;">
+          <div class="card-body">
+            <h4 class="card-title" id="titulos" style="text-align: center; color: white;">En Plantas Reyes</h4>
+            <p class="card-text" id="parrafo" style="text-align: justify; color: white;">
+              Cultivamos más que plantas, cultivamos sueños verdes. Somos un vivero apasionado por la naturaleza, con raíces profundas en la dedicación, el compromiso y el amor por el medio ambiente.
+              Desde nuestros inicios, hemos trabajado para ofrecer a nuestros clientes plantas de la más alta calidad, accesorios para jardinería y 
+              una experiencia de compra enriquecedora. Aquí, creemos que cada planta tiene una historia, y nuestro propósito es ayudarte a contar la tuya.
+            </p>
+            <img src="https://images.unsplash.com/photo-1597868165956-03a6827955b1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            class="img-fluid rounded-start" alt="entrega" id="icono" style="width: auto; height: auto;">
+
+            <a href="./pages/contactanos.php" class="btn btn-light" id="contact-button">Contacto</a>
+          </div>
+        </div>
       </div>
+      
+      <!-- Segunda tarjeta -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow" id="cont-t" style="background-color: #587742;">
+          <div class="card-body">
+            <h4 class="card-title" id="titulos" style="text-align: center; color: white;">¿Por qué elegirnos?</h4>
+            <p class="card-text" id="parrafo" style="text-align: justify; color: white;">
+              Calidad garantizada: Cada planta es seleccionada y cuidada con esmero para garantizar que llegue a ti en perfecto estado.
+              <br>Simplicidad en cada compra: Navega, elige y recibe tus productos sin complicaciones, directamente en tu puerta.
+             <br> Asesoramiento personalizado: ¿Tienes dudas sobre tus plantas? Nuestro equipo está aquí para guiarte.
+            </p>
+            <img src="https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            class="img-fluid rounded-start" alt="entrega" id="icono" style="width: auto; height: auto;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tercera tarjeta -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow" id="cont-t" style="background-color: #587742;">
+          
+          <div class="card-body">
+            <h4 class="card-title" id="titulos" style="text-align: center; color: white;">Planta del Mes</h4>
+            <p class="card-text" id="parrafo" style="text-align: justify; color: white;">
+              Como se conoce en México, diciembre está lleno de nochebuenas para decorar nuestros hogares en vísperas de Navidad. Además de acompañarnos en estas fiestas, 
+              es un regalo perfecto para brindar un ambiente acogedor con los seres queridos.
+            </p>
+            <img src="https://images.unsplash.com/photo-1661190111044-0f1c2258878f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            class="img-fluid rounded-start" alt="entrega" id="icono" style="width: auto; height: auto;">
+
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
-  <br><br><br><br><br>
-  <!-- Final PAM-->
+</div>
+<br><br><br><br><br>
 
   <!--inicio footer
   <div id="footer" class="container-fluid">
@@ -296,24 +307,41 @@ $pdo = null;
       </div>
     </div>-->
 
-   <!--inicio footer-->
-<div id="footer" class="container-fluid">
-  <div class="row p-5">
+ <!-- Inicio Pie de página -->
+<div id="footer" class="container-fluid" style="background-color: #587742; color: #ffffff; padding: 20px;">
+  <div class="row">
     <!-- Columna con el mensaje grande -->
     <div class="col-12 text-center">
-      <h2>¡Gracias por confiar en nosotros!</h2>
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</h2>
     </div>
-    <!-- Columna con los detalles de contacto y redes sociales -->
-    <div class="col-6 text-left">
-      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+
+    <!-- Columna izquierda con telefono -->
+    <div class="col-md-4 text-left">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;"><i class="bi bi-telephone-fill"></i> Teléfono: 55 5275 0932</p>
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">
+        <a href="./pages/sobre-nosotros.php" style="text-decoration: none; color: #223b10;"><i class="bi bi-info-circle-fill"></i> Sobre Nosotros</a>
+      </p>
     </div>
-    <!-- Columna derecha con Facebook -->
-    <div class="col-3 text-right">
-      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
-    </div>
-  </div>
+
+    <!-- Columna central con redes sociales -->
+    <div class="col-md-4 text-center">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;">Síguenos en:</p>
+      <a href="https://www.facebook.com/p/Plantas-Reyes-100088890480708/?locale=es_LA" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=59780&format=png&color=000000" alt="Facebook" width="35px" height="35px">
+        
+      </a>
+     
+      <a href="https://www.instagram.com/ernestogabrielreyesmaulen?igsh=MTFibW1vZnU4dWozbw==" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" alt="Instagram" width="40px" height="40px">
+      </a>
 </div>
-<!--final footer-->
+
+    <!-- Columna derecha con correo -->
+    <div class="col-md-4 text-right">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color:#223b10; "><i class="bi bi-correo"></i> Correo: martinreyese27@gmail.com</p>
+    </div>
+</div>
+<!-- Fin Pie de página -->
 
   </div>
   <script src="./js/carritoSpan.js" type="module"></script>

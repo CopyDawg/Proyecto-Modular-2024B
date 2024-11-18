@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-    <a class="title" href="/index.php">
+    <a class="title" href="../index.php">
       <h4>PLANTAS REYES</h4>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -75,6 +75,11 @@
       <div class="col-lg-9 col-xl-12 mx-auto">
         <div class="card flex-row my-5 overflow-hidden" id="idContenedorPrincipal">
           <div class="card-img-left d-none d-md-flex ">
+                    <!-- Imagen de la derecha con ancho ajustado -->
+        <div class="card-img-left d-none d-md-flex" style="width: 100%; max-width: 500%;">
+          <img src="https://images.unsplash.com/photo-1589991279867-10e854e743f0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               class="img-fluid" alt="Imagen decorativa" style="object-fit: cover; width: 100%; height: auto;">
+        </div>
               <!-- Background image for card set in CSS! -->
               <div class="vr" ></div>
           </div>
@@ -158,29 +163,41 @@
     </div>
   </div>
   <!--___________________________________________INICIO PIE DE PAGINA___________________________________________
-  <div id="footer" class="container-fluid">
-    <div class="row p-5">
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <img src="../assets/icons/Plantas_reyes_LOGOS-09.png" alt="PlantasReyes" width="100rem" height="100rem">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <a href="/pages/sobre-nosotros.php"><p>Nosotros</p></a>
-        <a href="/pages/contactanos.php"><p>Contacto</p></a>
-
-        <img src="../assets/icons/facebook.png" alt="facebook" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Terminos y condiciones</p>
-        <p>Preguntas frecuentes</p>
-        <img src="../assets/icons/instagram.png" alt="instagram" id="iconos-redes">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <p>Aviso de privacidad</p>
-        <p>Envios, pagos y devoluciones</p>
-        <img src="../assets/icons/github.png" alt="github" id="iconos-redes">
-      </div>
+  <!-- Inicio Pie de página -->
+<div id="footer" class="container-fluid" style="background-color: #587742; color: #ffffff; padding: 20px;">
+  <div class="row">
+    <!-- Columna con el mensaje grande -->
+    <div class="col-12 text-center">
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</h2>
     </div>
-  </div>-->
+
+    <!-- Columna izquierda con telefono -->
+    <div class="col-md-4 text-left">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;"><i class="bi bi-telephone-fill"></i> Teléfono: 55 5275 0932</p>
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">
+        <a href="../pages/sobre-nosotros.php" style="text-decoration: none; color: #223b10;"><i class="bi bi-info-circle-fill"></i> Sobre Nosotros</a>
+      </p>
+    </div>
+
+    <!-- Columna central con redes sociales -->
+    <div class="col-md-4 text-center">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;">Síguenos en:</p>
+      <a href="https://www.facebook.com/p/Plantas-Reyes-100088890480708/?locale=es_LA" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=59780&format=png&color=000000" alt="Facebook" width="35px" height="35px">
+        
+      </a>
+     
+      <a href="https://www.instagram.com/ernestogabrielreyesmaulen?igsh=MTFibW1vZnU4dWozbw==" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" alt="Instagram" width="40px" height="40px">
+      </a>
+</div>
+
+    <!-- Columna derecha con correo -->
+    <div class="col-md-4 text-right">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color:#223b10; "><i class="bi bi-correo"></i> Correo: martinreyese27@gmail.com</p>
+    </div>
+</div>
+<!-- Fin Pie de página -->
 <!--___________________________________________FIN PIE DE PAGINA___________________________________________-->  
 
   <!-- Scripts -->

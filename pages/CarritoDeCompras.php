@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-    <a class="title" href="/index.php">
+    <a class="title" href="../index.php">
       <h4>PLANTAS REYES</h4>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

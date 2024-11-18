@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="/index.php">
+      <a class="title" href="../index.php">
         <h4>PLANTAS REYES</h4>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -108,7 +108,7 @@
         <img src="https://images.unsplash.com/photo-1632380211596-b96123618ca8?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Aloe Vera">
         <div class="card-body">
           <h5 class="card-title">Aloe Vera</h5>
-          <p class="card-text">Ideal para interiores. Sus propiedades purificadoras mejoran el ambiente.</p>
+          <p class="card-text">Linda y puede ser beneficiosa para tu salud.</p>
           <p class="card-text"><strong>Precio: $120 MXN</strong></p>
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
@@ -123,8 +123,8 @@
          style="width: 355px; height: 450px;">
         <div class="card-body">
           <h5 class="card-title">Lavanda</h5>
-          <p class="card-text">Perfecta para exteriores. Su aroma relaja y embellece el jardín.</p>
-          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <p class="card-text"> Su aroma relaja y embellece el jardín.</p>
+          <p class="card-text"><strong>Precio: $100 MXN</strong></p>
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
       </div>
@@ -137,8 +137,8 @@
          style="width: 355px; height: 450px;">
         <div class="card-body">
           <h5 class="card-title">Orquídea Phalaenopsis</h5>
-          <p class="card-text">Perfecta para embellecer cualquier lugar y darle estilo lujoso.</p>
-          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <p class="card-text">Perfecta para embellecer cualquier lugar.</p>
+          <p class="card-text"><strong>Precio: $150 MXN</strong></p>
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
       </div>
@@ -150,9 +150,9 @@
          class="card-img-top" alt="Peonias"
          style="width: 355px; height: 450px;">
         <div class="card-body">
-          <h5 class="card-title">Peonias</h5>
-          <p class="card-text">Perfecta para embellecer cualquier lugar y darle estilo lujoso.</p>
-          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <h5 class="card-title">Ramo de Peonias</h5>
+          <p class="card-text">Dale un toque elegante a tu hogar con este mini ramo de 5 peonias.</p>
+          <p class="card-text"><strong>Precio: $200 MXN</strong></p>
     
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
@@ -166,8 +166,8 @@
          style="width: 355px; height: 450px;">
         <div class="card-body">
           <h5 class="card-title">Ficus Lyrata          </h5>
-          <p class="card-text">Perfecta para embellecer cualquier lugar y darle estilo lujoso.</p>
-          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <p class="card-text">Agrega ese tono verde que irradia paz. Llevate la maceta de ceramica gratis. </p>
+          <p class="card-text"><strong>Precio: $150 MXN</strong></p>
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
       </div>
@@ -176,13 +176,13 @@
     <!-- Rosas Rojas -->
     <div class="col-md-4 mb-4">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1694735043383-a7c966667e9d?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        <img src="https://images.unsplash.com/photo-1679621711784-8485ebe333f5?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
          class="card-img-top" alt="RojasRosas"
          style="width: 355px; height: 450px;">
         <div class="card-body">
-          <h5 class="card-title"> Rosas Rojas  </h5>
-          <p class="card-text">Perfecta para embellecer cualquier lugar y darle estilo lujoso.</p>
-          <p class="card-text"><strong>Precio: $90 MXN</strong></p>
+          <h5 class="card-title"> Docena de Rosas  </h5>
+          <p class="card-text">Para acompañarte en esas ocasiones especiales. Pregunta la variedad de colores.</p>
+          <p class="card-text"><strong>Precio: $150 MXN</strong></p>
           <button class="btn btn-success">Añadir al carrito</button>
         </div>
       </div>
@@ -194,24 +194,42 @@
 </div>
 
 
- <!--inicio footer-->
-<div id="footer" class="container-fluid">
-  <div class="row p-5">
+ <!-- Inicio Pie de página -->
+<div id="footer" class="container-fluid" style="background-color: #587742; color: #ffffff; padding: 20px;">
+  <div class="row">
     <!-- Columna con el mensaje grande -->
     <div class="col-12 text-center">
-      <h2>¡Gracias por confiar en nosotros!</h2>
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</h2>
     </div>
-    <!-- Columna con los detalles de contacto y redes sociales -->
-    <div class="col-6 text-left">
-      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+
+    <!-- Columna izquierda con telefono -->
+    <div class="col-md-4 text-left">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;"><i class="bi bi-telephone-fill"></i> Teléfono: 55 5275 0932</p>
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">
+        <a href="../pages/sobre-nosotros.php" style="text-decoration: none; color: #223b10;"><i class="bi bi-info-circle-fill"></i> Sobre Nosotros</a>
+      </p>
     </div>
-    <!-- Columna derecha con Facebook -->
-    <div class="col-3 text-right">
-      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
-    </div>
-  </div>
+
+    <!-- Columna central con redes sociales -->
+    <div class="col-md-4 text-center">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;">Síguenos en:</p>
+      <a href="https://www.facebook.com/p/Plantas-Reyes-100088890480708/?locale=es_LA" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=59780&format=png&color=000000" alt="Facebook" width="35px" height="35px">
+        
+      </a>
+     
+      <a href="https://www.instagram.com/ernestogabrielreyesmaulen?igsh=MTFibW1vZnU4dWozbw==" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" alt="Instagram" width="40px" height="40px">
+      </a>
 </div>
-<!--final footer-->
+
+    <!-- Columna derecha con correo -->
+    <div class="col-md-4 text-right">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color:#223b10; "><i class="bi bi-correo"></i> Correo: martinreyese27@gmail.com</p>
+    </div>
+</div>
+<!-- Fin Pie de página -->
+
 <script src="/js/carritoSpan.js" type="module"></script>
 <script src="/js/UserStatus.js"></script>
 </body>

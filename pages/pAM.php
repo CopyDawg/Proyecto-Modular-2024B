@@ -43,7 +43,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img class="rounded-circle" src="../assets/images/logoNavbar.png" width="60rem" alt="Plantas Reyes" />
-      <a class="title" href="index.php">
+      <a class="title" href="../index.php">
         <h4>PLANTAS REYES</h4>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -230,7 +230,7 @@
             <div class="card-body">
             <h4 class="card-title" id="titulos">Asesoría gratis</h4>
               <p class="card-text" id="parrafo">Plantas Reyes se encargará de la instalación en tu hogar.
-                Nuestro equipo llevará a cabo la colocación de las plantas, responderá todas tus preguntas y dejará tus
+                <br>Nuestro equipo llevará a cabo la colocación de las plantas, <br> responderá todas tus preguntas dejando tus
                 espacios limpios y listos para disfrutar.
                 Nos aseguraremos de que todo esté perfectamente colocado y en armonía con tu entorno.</p>
             </div>
@@ -261,24 +261,41 @@
   <br><br><br>
   <!-- Final contactanos!-->
 
-  <!--inicio footer-->
-<div id="footer" class="container-fluid">
-  <div class="row p-5">
+<!-- Inicio Pie de página -->
+<div id="footer" class="container-fluid" style="background-color: #587742; color: #ffffff; padding: 20px;">
+  <div class="row">
     <!-- Columna con el mensaje grande -->
     <div class="col-12 text-center">
-      <h2>¡Gracias por confiar en nosotros!</h2>
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</h2>
     </div>
-    <!-- Columna con los detalles de contacto y redes sociales -->
-    <div class="col-6 text-left">
-      <p style="font-size: 1rem;">Teléfono: 55 5275 0932</p>
+
+    <!-- Columna izquierda con telefono -->
+    <div class="col-md-4 text-left">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;"><i class="bi bi-telephone-fill"></i> Teléfono: 55 5275 0932</p>
+      <p style="font-size: 1.2rem; margin-bottom: 5px;">
+        <a href="../pages/sobre-nosotros.php" style="text-decoration: none; color: #223b10;"><i class="bi bi-info-circle-fill"></i> Sobre Nosotros</a>
+      </p>
     </div>
-    <!-- Columna derecha con Facebook -->
-    <div class="col-3 text-right">
-      <p style="font-size: 1rem;">Facebook: Plantas Reyes</p>
-    </div>
-  </div>
+
+    <!-- Columna central con redes sociales -->
+    <div class="col-md-4 text-center">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color: #223b10;">Síguenos en:</p>
+      <a href="https://www.facebook.com/p/Plantas-Reyes-100088890480708/?locale=es_LA" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=59780&format=png&color=000000" alt="Facebook" width="35px" height="35px">
+        
+      </a>
+     
+      <a href="https://www.instagram.com/ernestogabrielreyesmaulen?igsh=MTFibW1vZnU4dWozbw==" target="_blank" style="margin-right: 10px; color: #8FBC8F;">
+        <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" alt="Instagram" width="40px" height="40px">
+      </a>
 </div>
-<!--final footer-->
+
+    <!-- Columna derecha con correo -->
+    <div class="col-md-4 text-right">
+      <p style="font-size: 1.2rem; margin-bottom: 5px; color:#223b10; "><i class="bi bi-correo"></i> Correo: martinreyese27@gmail.com</p>
+    </div>
+</div>
+<!-- Fin Pie de página -->
 
   <script src="/js/carritoSpan.js" type="module"></script>
   <script src="/js/UserStatus.js"></script>
