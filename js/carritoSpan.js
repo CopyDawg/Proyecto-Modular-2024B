@@ -7,8 +7,10 @@ let carrito = [];
 
 // FUNCION PARA CONTADOR DEL CARRITO
 export function contadorCarrito(){
+    if (localStorage.key(0) === null) {
+        localStorage.setItem('carrito', JSON.stringify([]));
+    }
     carrito = JSON.parse(localStorage.getItem('carrito'));
-    console.log(carrito)
     spanCarrito.innerHTML = "";
     let imgCarrito = document.createElement('IMG');
     imgCarrito.setAttribute('src', '../assets/icons/iconoCarrito.png');
