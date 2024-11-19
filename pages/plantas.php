@@ -87,6 +87,7 @@
 </div>
 <!-- Fin Header -->
 
+<a href="usuarios.php">Regístrate</a>
 
 <!-- Barra con texto -->
 <div class="misionVision d-flex justify-content-md-center" id="titulo-encabezado-PI">

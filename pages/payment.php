@@ -1,3 +1,62 @@
+<!--Conexion bd -->
+<?php
+session_start(); // Asegúrate de que la sesión esté iniciada
+include '../conexion.php'; // Incluye la conexión a la base de datos
+
+// Verifica si el usuario está autenticado (si no, redirige a login.php)
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');  // Redirige al login si no está autenticado
+    exit(); // Detiene la ejecución del script
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recuperar los datos enviados desde el formulario
+    $id_usuario = $_SESSION['user_id']; // Usuario logueado
+    $nombre = $_POST['nombre'];
+    $estado = $_POST['estado'];
+    $ciudad = $_POST['ciudad'];
+    $colonia = $_POST['colonia'];
+    $codigo_postal = $_POST['codigo_postal'];
+    $calle_numero = $_POST['calle_numero'];
+    $telefono = $_POST['telefono'];
+    $referencias = $_POST['referencias'];
+    $metodo_pago = $_POST['metodo_pago']; // Este dato debe ser parte del formulario, dependiendo de la opción de pago
+
+    try {
+        // Insertar la dirección de envío en la base de datos (tabla dirección)
+        $stmt_direccion = $pdo->prepare('INSERT INTO direccion (id_usuarios, nombre, estado, ciudad, colonia, codigo_postal, calle_numero, telefono, referencias) 
+            VALUES (:id_usuario, :nombre, :estado, :ciudad, :colonia, :codigo_postal, :calle_numero, :telefono, :referencias)');
+        $stmt_direccion->bindParam(':id_usuario', $id_usuario);
+        $stmt_direccion->bindParam(':nombre', $nombre);
+        $stmt_direccion->bindParam(':estado', $estado);
+        $stmt_direccion->bindParam(':ciudad', $ciudad);
+        $stmt_direccion->bindParam(':colonia', $colonia);
+        $stmt_direccion->bindParam(':codigo_postal', $codigo_postal);
+        $stmt_direccion->bindParam(':calle_numero', $calle_numero);
+        $stmt_direccion->bindParam(':telefono', $telefono);
+        $stmt_direccion->bindParam(':referencias', $referencias);
+        $stmt_direccion->execute();
+
+        // Si es necesario, insertamos también el método de pago en la tabla metodo_pago
+        $stmt_pago = $pdo->prepare('INSERT INTO metodo_pago (id_usuarios, nombre) VALUES (:id_usuario, :nombre)');
+        $stmt_pago->bindParam(':id_usuario', $id_usuario);
+        $stmt_pago->bindParam(':nombre', $metodo_pago); // Aquí asumes que el nombre del método de pago se pasa
+        $stmt_pago->execute();
+
+        // Redirigir a la página de confirmación o a la página de venta exitosa
+        header('Location: confirmacion_pago.php');
+        exit();
+
+    } catch (PDOException $e) {
+        // Manejo de errores
+        error_log('Error al procesar la información: ' . $e->getMessage());
+        $error = 'Hubo un error al procesar la información, por favor intenta nuevamente.';
+    }
+}
+?>
+
+<!-- Termina la conexion -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,92 +128,79 @@
 
 <div class="row justify-content-center">
 
-        <!-- Inicia formulario -->
-    <div class="col-8">
-        <div class="card-body p-4 p-sm-5">
-            <h5 class="titulos card-title text-center mb-5 fw-light " id="Registrate_titulo">Dirección de envío</h5>
-            <form id="payment" novalidate>
-                <div class="form-floating mb-3">
-                    <input type="username" name="Nombre" class="form-control" id="fullName" placeholder="Name" required>
-                    <label for="fullName" id="text_label_Nom_Ape">Nombre (Nombre y apellidos)</label>
-                </div>
+    <!-- Inicia formulario -->
+<div class="col-8">
+    <div class="card-body p-4 p-sm-5">
+        <h5 class="titulos card-title text-center mb-5 fw-light " id="Registrate_titulo">Dirección de envío</h5>
+        <form action="procesar_pago.php" method="POST" id="payment" novalidate>
+            <div class="form-floating mb-3">
+                <input type="text" name="nombre" class="form-control" id="fullName" placeholder="Nombre" required>
+                <label for="fullName" id="text_label_Nom_Ape">Nombre (Nombre y apellidos)</label>
+            </div>
 
-                <div>
-                    <select class="form-select" aria-label="Default select example" name="Estado" id="state">
-                        <option selected>Estado</option>
-                        <option value="1">Ciudad de México</option>
-                        <option value="2">Estado de México</option>
-                    </select>
-                </div>
+            <div>
+                <select class="form-select" aria-label="Default select example" name="estado" id="state">
+                    <option selected>Estado</option>
+                    <option value="1">Ciudad de México</option>
+                    <option value="2">Estado de México</option>
+                </select>
+            </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" name="Ciudad" class="form-control" id="city" placeholder="Ciudad" required>
-                    <label for="city">Ciudad</label>
-                </div>
+            <div class="form-floating mb-3">
+                <input type="text" name="ciudad" class="form-control" id="city" placeholder="Ciudad" required>
+                <label for="city">Ciudad</label>
+            </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" name="Colonia" class="form-control" id="neighborhood" placeholder="Colonia" required>
-                    <label for="neighborhood">Colonia</label>
-                </div>
+            <div class="form-floating mb-3">
+                <input type="text" name="colonia" class="form-control" id="neighborhood" placeholder="Colonia" required>
+                <label for="neighborhood">Colonia</label>
+            </div>
 
-                <div class="form-floating mb-3">
-                    <input type="number" name="Código postal" class="form-control"  id="postalCode" placeholder="Código postal" required>
-                    <label for="postalCode">Código postal</label>
-                </div>
+            <div class="form-floating mb-3">
+                <input type="number" name="codigo_postal" class="form-control" id="postalCode" placeholder="Código postal" required>
+                <label for="postalCode">Código postal</label>
+            </div>
                 
-                <div class="form-floating mb-3">
-                    <input type="text" name="Calle y número" class="form-control" id="streetNumber" placeholder="Calle y número" required>
-                    <label for="streetNumber">Calle y número ext. e int.</label>
-                </div>
-                    
-                <div class="form-floating mb-3">
-                    <input type="tel" name="Número telefónico" class="form-control"  id="celphone" placeholder="Número telefónico" required>
-                    <label for="celphone">Número telefónico</label>
-                    <p class="description">A 10 dígitos</p>
-                </div>
+            <div class="form-floating mb-3">
+                <input type="text" name="calle_numero" class="form-control" id="streetNumber" placeholder="Calle y número" required>
+                <label for="streetNumber">Calle y número ext. e int.</label>
+            </div>
+                
+            <div class="form-floating mb-3">
+                <input type="tel" name="telefono" class="form-control" id="celphone" placeholder="Número telefónico" required>
+                <label for="celphone">Número telefónico</label>
+                <p class="description">A 10 dígitos</p>
+            </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" name="Referencias" class="form-control" id="references" placeholder="Referencias" required>
-                    <label for="references">Opcional: referencias</label>
+            <div class="form-floating mb-3">
+                <input type="text" name="referencias" class="form-control" id="references" placeholder="Referencias" required>
+                <label for="references">Opcional: referencias</label>
+            </div>
+
+            <!-- alert -->
+            <div id="liveAlertPlaceholder"></div>
+
+            <div class="d-grid mb-2">
+                <div class="row">
+                    <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="reset" id="mainButtonCancel">Cancelar</button>
+                    <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="submit" id="mainButton">Guardar</button>
                 </div>
-
-                    
-                    <!-- alert -->
-                <div id="liveAlertPlaceholder"></div>
-
-                <div class="d-grid mb-2">
-                    <div class="row">
-                        <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="reset" id="mainButtonCancel">Cancelar</button>
-                        <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="submit" id="mainButton">Guardar</button>
-                    </div>
-                </div>
-                <!--Link al Log In-->
-                <a class="d-block text-center mt-2 small text-decoration-none" a href="./login.php">¿Ya tienes una cuenta? Inicia sesión</a> 
-                <hr class="my-4">
-
-                <!-- <div class="d-grid mb-2">
-                    <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
-                    <i class="fab fa-google me-2"></i> Sign up with Google
-                    </button>
-                </div>
-
-                <div class="d-grid">
-                    <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
-                    <i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
-                    </button>
-                </div> -->
-            </form>
-        </div>
+            </div>
+            <!--Link al Log In-->
+            <a class="d-block text-center mt-2 small text-decoration-none" href="./login.php">¿Ya tienes una cuenta? Inicia sesión</a> 
+            <hr class="my-4">
+        </form>
     </div>
-      <!-- fin formulario -->
-
-       <!-- Inicia botón payplay -->
-       <div class="col-4 " id="botonPago">
-        <!-- Set up a container element for the button -->
-          <div id="paypal-button-container" class="border d-flex aligns-items-center justify-content-center"></div>
-       </div>
-       <!-- Fin botón payplay -->
 </div>
+<!-- Fin formulario -->
+
+<!-- Inicia botón payplay -->
+<div class="col-4 " id="botonPago">
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container" class="border d-flex aligns-items-center justify-content-center"></div>
+</div>
+<!-- Fin botón payplay -->
+
 
   <!--___________________________________________INICIO PIE DE PAGINA___________________________________________
   <div id="footer" class="container-fluid">

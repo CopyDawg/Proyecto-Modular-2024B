@@ -28,19 +28,19 @@
 <?php
 // Primero, definimos los datos de conexión a la base de datos
 $host = 'localhost';      // La dirección del servidor de la base de datos
-$dbname = 'PlantasReyes';    // El nombre de la base de datos
+$dbname = 'Plantas.Reyes.M';    // El nombre de la base de datos
 $user = 'postgres';     // El usuario de la base de datos
-$password = 'sonic301299'; // La contraseña del usuario
+$password = 'cucei'; // La contraseña del usuario
 
 try {
     // Crear una conexión a la base de datos usando PDO (PHP Data Objects)
-    $pdo = new PDO("pgsql:host=$host;port=1234;dbname=$dbname", $user, $password);
+    $pdo = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $user, $password);
 
     // Configuramos PDO para que lance excepciones en caso de error
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Definimos una consulta SQL para obtener los datos necesarios para el combobox
-    $sql = "SELECT * FROM categorias"; // Reemplaza 'tabla' por el nombre de la tabla y ajusta los campos según sea necesario
+    $sql = "SELECT * FROM productos"; // Reemplaza 'tabla' por el nombre de la tabla y ajusta los campos según sea necesario
 
     // Preparamos la consulta SQL
     $stmt = $pdo->prepare($sql);
@@ -104,10 +104,10 @@ $pdo = null;
     
               <li class="nav-item">
               <li class="nav-item">
-                <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
-                  <img src="./assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
-                </a>
-              </li>
+          <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
+            <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+          </a>
+        </li>
               </li>
               <li class="nav-item dropdown" id="Usuario-Estatus">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,3 +1,39 @@
+<!-- Inicio de base de datos login-->
+<?php
+include '../conexion.php';
+session_start(); // Inicia la sesión para gestionar los usuarios logueados
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $password = $_POST['password'];
+
+    try {
+        // Consulta para validar usuario
+        $stmt = $pdo->prepare('SELECT id, password FROM usuarios WHERE email = :email');
+        $stmt->bindParam(':correo', $email);
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Usuario autenticado
+            $_SESSION['user_id'] = $user['id'];
+            header('Location: dashboard.php'); // Redirige al usuario al dashboard
+            exit();
+        } else {
+            $error = 'Correo o contraseña incorrectos';
+        }
+    } catch (PDOException $e) {
+        error_log('Error en el inicio de sesión: ' . $e->getMessage());
+        $error = 'Ha ocurrido un error. Intenta nuevamente más tarde.';
+    }
+}
+?>
+
+<!-- HTML permanece igual -->
+
+<!-- Fin de base de datos login-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,26 +108,20 @@
 </nav>
 <!--fin del navbar-->
 
-  <div class="container">
+<div class="container">
     <div class="row">
       <div class="col-lg-9 col-xl-12 mx-auto">
         <div class="card flex-row my-5 overflow-hidden" id="idContenedorPrincipal">
-          <div class="card-img-left d-none d-md-flex ">
-
-             <!-- Imagen de la derecha con ancho ajustado -->
-        <div class="card-img-left d-none d-md-flex" style="width: 100%; max-width: 500%;">
-          <img src="https://images.unsplash.com/photo-1615463366922-26e1f34b56ef?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-               class="img-fluid" alt="Imagen decorativa" style="object-fit: cover; width: 100%; height: auto;">
-        </div>
-
-            <!-- Background image for card set in CSS! -->
-            <div class="vr" ></div>
+          <div class="card-img-left d-none d-md-flex" style="width: 500px; max-width: auto;">
+            <img src="https://images.unsplash.com/photo-1615463366922-26e1f34b56ef?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 class="img-fluid" alt="Imagen decorativa" style="object-fit: cover; width: 100%; height: auto;">
           </div>
+
           <!-- Inicia formulario -->
-          
           <div class="card-body p-4 p-sm-5">
-            <h5 class="titulos card-title text-center mb-5 fw-light " id="IniciaSesion_titulo">INICIAR SESIÓN</h5>
-            <form method="get" id="logIn" novalidate>
+            <h5 class="titulos card-title text-center mb-5 fw-light" id="IniciaSesion_titulo">INICIAR SESIÓN</h5>
+           
+            <form method="POST" id="logIn" novalidate>
               <div class="row mb-3"></div>
                 <div class="form-floating mb-3">
                   <input type="email" name="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" required>
@@ -105,27 +135,21 @@
                   <!-- alert -->
                   <div id="liveAlertPlaceholder"></div>
 
+                  <?php if (isset($error)): ?>
+                  <div class="alert alert-danger" role="alert">
+                      <?php echo htmlspecialchars($error); ?>
+                  </div>
+                  <?php endif; ?>
+
                   <div class="d-grid mb-2">
                     <div class="row">
                       <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="reset" id="mainButtonCancel">Cancelar</button>
-                      <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="submit" id="mainButton">Iniciar Sesion</button>
+                      <button class="btn btn-primary btn-login fw-bold text-uppercase col-5" type="submit" id="mainButton">Iniciar Sesión</button>
                     </div>
                   </div>
                   <a class="d-block text-center mt-2 small text-decoration-none" href="./signup.php">¿No tienes una cuenta? Crea tu cuenta.</a>
                   <a class="d-block text-center mt-2 small text-decoration-none" href="./forgotPassword.php">Olvidé mi contraseña.</a>
                   <hr class="my-4">
-
-                  <!-- <div class="d-grid mb-2">
-                    <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
-                      <i class="fab fa-google me-2"></i> Sign up with Google
-                    </button>
-                  </div>
-
-                  <div class="d-grid">
-                    <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
-                      <i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
-                    </button>
-                  </div> -->
                 </div>
               </div>
             </form>
@@ -134,6 +158,7 @@
       </div>
     </div>
   </div>
+
 
    <!-- Inicio Pie de página -->
 <div id="footer" class="container-fluid" style="background-color: #587742; color: #ffffff; padding: 20px;">
