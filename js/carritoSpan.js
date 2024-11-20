@@ -10,15 +10,11 @@ export function contadorCarrito(){
         localStorage.setItem('carrito', JSON.stringify([]));
     }
     carrito = JSON.parse(localStorage.getItem('carrito'));
-    spanCarrito.innerHTML = "";
-    let imgCarrito = document.createElement('IMG');
-    imgCarrito.setAttribute('src', './assets/icons/iconoCarrito.png');
-    imgCarrito.setAttribute('id', 'iconoCarrito');
     let badge = document.createElement('span');
     badge.classList.add('position-absolute', 'translate-middle', 'badge', 'rounded-pill', 'bg-danger');
     badge.setAttribute('id', 'carritoContador');
     badge.textContent = calcularProductos();
-    spanCarrito.append(imgCarrito, badge);
+    spanCarrito.append(badge);
 }
 
 function calcularProductos() {
