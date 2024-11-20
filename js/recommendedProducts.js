@@ -1,4 +1,5 @@
 import { loMasPedido, añadirCarrito } from './base_Datos.js';
+import { agregarProducto } from './CarritoCompras2.js';
 
 const container = document.querySelector('.image-container');
 
@@ -18,7 +19,9 @@ const renderProducts = async () => {
             <button class="recommended-product-button botonTarjeta">Agregar al carrito</button>
         `;
         const button = productDiv.querySelector('.recommended-product-button');
-        button.addEventListener('click', () => añadirCarrito(product));
+        button.addEventListener('click', () => {
+            agregarProducto(product);
+        });
         container.appendChild(productDiv);
     });
 };
