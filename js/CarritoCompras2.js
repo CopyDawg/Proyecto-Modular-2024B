@@ -38,104 +38,82 @@ function calcularTotal() {
     texto.textContent = `Total a pagar: ${total}`
 }
 
-function  eliminarCarrito(indice){
-    
+export function  eliminarCarrito(nombre){
+    const infoProduct = buscarCarritoNombre(nombre)
     carrito = carrito.filter(object => {
-        if (object.id === indice) {
+        if (object.id === infoProduct.id) {
             object.cantidad = 0;
         }
-        return object.id !== indice;
+        return object.id !== infoProduct.id;
     });
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    carrito = JSON.parse(localStorage.getItem('carrito'));
+    RenderCarrito();
+    calcularTotal();
 }
 
+export function restarProducto(nombre) {
+    const infoProduct = buscarCarritoNombre(nombre);
+    if(infoProduct === null) {
+        return;
+    }
+    infoProduct.cantidad--;
+    if(infoProduct.cantidad === 0) {
+        eliminarCarrito(nombre);
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    carrito = JSON.parse(localStorage.getItem('carrito'));
+    RenderCarrito();
+    calcularTotal();
+}
+
+export function sumarProducto(nombre) {
+    const infoProduct = buscarCarritoNombre(nombre)
+    if(infoProduct === null) {
+        return;
+    }
+    infoProduct.cantidad++;  
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    carrito = JSON.parse(localStorage.getItem('carrito'));  
+    RenderCarrito();
+    calcularTotal();
+}
+
+export function agregarProducto(producto) {
+    const infoProduct = buscarCarritoNombre(producto.nombre)
+    console.log(`infoProduct: ${JSON.stringify(infoProduct, null, 2)}`);
+    if(infoProduct === null || infoProduct === undefined) {        
+        producto.cantidad = 1;
+        carrito.push(producto);
+    }
+    else {
+        producto.cantidad++;
+        const index = carrito.findIndex(item => item.nombre === producto.nombre);
+        carrito[index] = producto;
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    RenderCarrito();
+    calcularTotal();
+}
 
 mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Eliminar') ){
         const productoTarjeta = e.target.parentElement.parentElement.parentElement;
-        
-        
-
-        //En caso de ser necesario creó un onjeto de java desde el arreglo directo
-        const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
-        
-
-        eliminarCarrito(infoProduct.id);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        carrito = JSON.parse(localStorage.getItem('carrito'));
-        RenderCarrito();
-        calcularTotal();
+        eliminarCarrito(productoTarjeta.querySelector('.NombreTarjeta').textContent);
     }
 });
 
-
-
 mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Restar') ){
-        
         const productoTarjeta = e.target.parentElement.parentElement.parentElement.parentElement;
-
-        //En caso de ser necesario creó un onjeto de java desde el arreglo directo
-        const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
-
-        const infoProduct2 = {
-            nombre: productoTarjeta.querySelector('.NombreTarjeta').textContent,
-            cantidad : 1,
-            precio: productoTarjeta.querySelector('.precioProducto').textContent
-
-        }  
-
-        const existente = existeCarritoNombre(infoProduct2.nombre);
-
-        if(existente){
-
-            let objIndex = carrito.findIndex((obj => obj.id === infoProduct.id));       
-
-            carrito[objIndex].cantidad--;
-            if(carrito[objIndex].cantidad<=0){
-                eliminarCarrito(infoProduct.id);
-            }
-        }
-
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        carrito = JSON.parse(localStorage.getItem('carrito'));
-        RenderCarrito();
-        calcularTotal();
-        
+        restarProducto(productoTarjeta.querySelector('.NombreTarjeta').textContent)
     }
 })
 
 mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Añadir') ){
-        
         const productoTarjeta = e.target.parentElement.parentElement.parentElement.parentElement;
-        
-        
-
-        //En caso de ser necesario creó un onjeto de java desde el arreglo directo
-        const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
-
-        const infoProduct2 = {
-            nombre: productoTarjeta.querySelector('.NombreTarjeta').textContent,
-            cantidad : 1,
-            precio: productoTarjeta.querySelector('.precioProducto').textContent
-
-        }
-        const existente = existeCarritoNombre(infoProduct2.nombre);
-        
-        if(existente){
-
-            let objIndex = carrito.findIndex((obj => obj.id === infoProduct.id));
-
-            
-            carrito[objIndex].cantidad++;
-            
-        }
-        
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        carrito = JSON.parse(localStorage.getItem('carrito'));  
-        RenderCarrito();
-        calcularTotal();
-
+        sumarProducto(productoTarjeta.querySelector('.NombreTarjeta').textContent)
     }
 })
 
