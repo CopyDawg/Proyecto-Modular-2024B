@@ -26,7 +26,7 @@
         <div class="container-fluid" id="navbar-container">
             <img class="rounded-circle" id="pr" src="../assets/images/logoNavbar.png" width="60rem"
                 alt="Plantas Reyes" />
-            <a class="title" id="pr" href="linpagina inicial">
+            <a class="title" id="pr" href="../index.php">
                 <h4 id="TituloPR">PLANTAS REYES</h4>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -49,12 +49,12 @@
                         <a class="nav-link" href="./contactanos.php">Contáctanos</a>
                     </li>
                     <li class="nav-item" id="pr">
-                        <a class="nav-link" href="./CarritoDeCompras">Carrito de compras</a>
+                        <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
                     </li>
 
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link m-0" href="./link carrito" id="carritoIcon">
+                        <a class="nav-link m-0" href="./CarritoDeCompras.php" id="carritoIcon">
                             <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" id="pr" alt="iconoCarrito">
                         </a>
                     </li>

@@ -68,20 +68,20 @@ loMasPedido.forEach(producto => {
 
 });
 
-containerCards.addEventListener('click', e => {
-    if(e.target.classList.contains('botonTarjeta') ){
-        const productoTarjeta = e.target.parentElement;
-        console.log(productoTarjeta);
+// containerCards.addEventListener('click', e => {
+//     if(e.target.classList.contains('botonTarjeta') ){
+//         const productoTarjeta = e.target.parentElement;
+//         console.log(productoTarjeta);
 
-        // //En caso de ser necesario se creo un objeto de java desde el arreglo directo
-        const infoProduct = (productoTarjeta.querySelector('.nombreProducto').textContent);
-        console.log(infoProduct);
-        const elementoBD = buscarloMasPedidoname(infoProduct);
-        console.log(elementoBD);
-        console.log(typeof(elementoBD));
-        añadirCarrito(elementoBD);
-        contadorCarrito();
-    }
+//         // //En caso de ser necesario se creo un objeto de java desde el arreglo directo
+//         const infoProduct = (productoTarjeta.querySelector('.nombreProducto').textContent);
+//         console.log(infoProduct);
+//         const elementoBD = buscarloMasPedidoname(infoProduct);
+//         console.log(elementoBD);
+//         console.log(typeof(elementoBD));
+//         añadirCarrito(elementoBD);
+//         contadorCarrito();
+//     }
 
-});
+// });
 

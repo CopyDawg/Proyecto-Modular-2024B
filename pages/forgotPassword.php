@@ -42,12 +42,12 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/pages/CarritoDeCompras.php">Carrito de compras</a>
+          <a class="nav-link" href="./CarritoDeCompras.php">Carrito de compras</a>
         </li>
 
         <li class="nav-item">
         <li class="nav-item">
-          <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+          <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
             <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
           </a>
         </li>
@@ -65,7 +65,7 @@
 
           </ul>
         </li>
-
+      </ul>
     </div>
   </div>
 </nav>

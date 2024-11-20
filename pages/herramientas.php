@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../styles/contactanos.css">
   <link rel="stylesheet" href="../styles/Navbar.css">
  
-  <script src="../js/herramientas.js" async defer></script>
+  <script src="../js/herramientas.js" type="module" async defer></script>
   <title>Herramientas</title>
 </head>
 <body>
@@ -53,7 +53,7 @@
 
           <li class="nav-item">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+            <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
               <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
             </a>
           </li>
@@ -231,8 +231,8 @@
 
 
   </div>
-  <script src="/js/carritoSpan.js" type="module" async defer></script>
-  <script src="/js/UserStatus.js"></script>
+  <script src="../js/carritoSpan.js" type="module" async defer></script>
+  <script src="../js/UserStatus.js"></script>
   <!--final footer-->
 </body>
 </html>
