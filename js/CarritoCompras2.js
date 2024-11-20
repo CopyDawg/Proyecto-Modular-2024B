@@ -10,7 +10,6 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 
 // FUNCION PARA CONTADOR DEL CARRITO
 export function contadorCarrito(){
-    carrito = JSON.parse(localStorage.getItem('carrito'));
     spanCarrito.innerHTML = "";
     let imgCarrito = document.createElement('IMG');
     imgCarrito.setAttribute('src', '../assets/icons/iconoCarrito.png');
@@ -35,33 +34,30 @@ function calcularTotal() {
     carrito.forEach( producto => {
         total += (producto.precio * producto.cantidad);
     });
-    console.log(total);
     const texto = document.getElementById("total");
     texto.textContent = `Total a pagar: ${total}`
 }
 
 function  eliminarCarrito(indice){
-    console.log('inicio: ', carrito)
+    
     carrito = carrito.filter(object => {
         if (object.id === indice) {
             object.cantidad = 0;
         }
         return object.id !== indice;
     });
-    console.log('final: ', carrito)
-
 }
 
 
 mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Eliminar') ){
         const productoTarjeta = e.target.parentElement.parentElement.parentElement;
-        console.log(productoTarjeta);
-        console.log(productoTarjeta.querySelector('.NombreTarjeta').textContent);
+        
+        
 
         //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
-        console.log(infoProduct)
+        
 
         eliminarCarrito(infoProduct.id);
         localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -77,8 +73,6 @@ mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Restar') ){
         
         const productoTarjeta = e.target.parentElement.parentElement.parentElement.parentElement;
-        console.log(productoTarjeta);
-        console.log(productoTarjeta.querySelector('.NombreTarjeta').textContent);
 
         //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
@@ -88,18 +82,14 @@ mainContainerTarjetas.addEventListener('click', e => {
             cantidad : 1,
             precio: productoTarjeta.querySelector('.precioProducto').textContent
 
-        }
-        // console.log("Tipo de dato en carrito: "+typeof(carrito[2].nombre)+ " "+carrito[2].nombre);
-        // console.log("Tipo de dato de los elementos obtenidos por el query selector: "+typeof(infoProduct2.nombre)+ " " +infoProduct2.nombre);
+        }  
 
         const existente = existeCarritoNombre(infoProduct2.nombre);
-        //console.log("Impresión si existe el objeto: "+existente);
 
         if(existente){
 
             let objIndex = carrito.findIndex((obj => obj.id === infoProduct.id));       
 
-            //console.log("Impresión del indice en el arreglo: "+objIndex);
             carrito[objIndex].cantidad--;
             if(carrito[objIndex].cantidad<=0){
                 eliminarCarrito(infoProduct.id);
@@ -118,8 +108,8 @@ mainContainerTarjetas.addEventListener('click', e => {
     if(e.target.classList.contains('btn-Añadir') ){
         
         const productoTarjeta = e.target.parentElement.parentElement.parentElement.parentElement;
-        console.log(productoTarjeta);
-        console.log(productoTarjeta.querySelector('.NombreTarjeta').textContent);
+        
+        
 
         //En caso de ser necesario creó un onjeto de java desde el arreglo directo
         const infoProduct = buscarCarritoNombre(productoTarjeta.querySelector('.NombreTarjeta').textContent)
@@ -136,11 +126,11 @@ mainContainerTarjetas.addEventListener('click', e => {
 
             let objIndex = carrito.findIndex((obj => obj.id === infoProduct.id));
 
-            console.log("Impresión del indice en el arreglo: "+objIndex);
+            
             carrito[objIndex].cantidad++;
-            console.log(carrito);
+            
         }
-        console.log(infoProduct);
+        
         localStorage.setItem('carrito', JSON.stringify(carrito));
         carrito = JSON.parse(localStorage.getItem('carrito'));  
         RenderCarrito();

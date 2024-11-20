@@ -103,11 +103,11 @@ $pdo = null;
               </li>
     
               <li class="nav-item">
-              <li class="nav-item">
-          <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
-            <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
-          </a>
-        </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/CarritoDeCompras.php" id="carritoIcon">
+                    <img src="./assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
+                  </a>
+                </li>
               </li>
               <li class="nav-item dropdown" id="Usuario-Estatus">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../styles/Navbar.css">
  
 
-  <script src="/js/plantas.js" type="module" async defer></script>
+  <script src="../js/plantas.js" type="module" async defer></script>
 
     <title>Plantas</title>
 </head>
@@ -54,7 +54,7 @@
 
           <li class="nav-item">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/CarritoDeCompras.php" id="carritoIcon">
+            <a class="nav-link" href="./CarritoDeCompras.php" id="carritoIcon">
               <img src="../assets/icons/iconoCarrito.png" id="iconoCarrito" alt="iconoCarrito">
             </a>
           </li>
@@ -231,7 +231,7 @@
 </div>
 <!-- Fin Pie de página -->
 
-<script src="/js/carritoSpan.js" type="module"></script>
-<script src="/js/UserStatus.js"></script>
+<script src="../js/carritoSpan.js" type="module"></script>
+<script src="../js/UserStatus.js"></script>
 </body>
 </html>

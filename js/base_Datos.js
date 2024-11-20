@@ -10,14 +10,14 @@ var loMasPedido = [
     {
         id: 3,
         nombre: "ESFERA CERÁMICA",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/esfera-grande-fibra.jpg?resize=300%2C300&ssl=1",
+        url: "https://blumart.mx/cdn/shop/products/DSC_0352.jpg",
         precio: 450.00,
         descripcion: "Una maceta perfecta para resaltar tus plantas",
         categoria: "Macetas de Cerámica"
     },
     {
         id: 4,
-        nombre: "KIT DE HERRAMIENTAS",
+        nombre: "KIT DE HERRAMIENTAS MULTIUSO PARA TODO TIPO DE HOGAR O DONDE USTED QUIERA USARLO, UNA VEZ QUE LO COMPRE ES DE USTED Y YA USTED SABRA",
         url: "https://as2.ftcdn.net/v2/jpg/02/65/10/51/1000_F_265105182_1kHISR3wzXYeADjOmnhU8lLvd6EyNxuE.jpg",
         precio: 550.00,
         descripcion: "Todo lo que necesitas para dar mantenimiento a tus preciadas plantas",
@@ -269,6 +269,10 @@ var herramientas = [
 
 var carrito = []
 
+export function buscarloMasPedidoname(nombreProducto){
+    var result = loMasPedido.find(item => item.nombre === nombreProducto);
+    return result;
+}
 
 //Buscar elementos en la BD de herramientas
 export function buscarHerramientas(idHerramienta) {

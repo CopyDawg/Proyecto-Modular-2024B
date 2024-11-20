@@ -21,6 +21,9 @@
   width: 2rem;
   height: 2rem;
 }
+#carritoIcon{
+  background-color: #679436;
+}
 .navbar {
 
   padding: 0;

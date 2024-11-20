@@ -28,7 +28,7 @@
 
 .nav-link {
   font-family: 'Montserrat', sans-serif;
- 
+}
 
 .nav-link:hover, .title:hover {
   color: #EFE9E7;
@@ -74,5 +74,5 @@ nav-item:hover, .title:hover {
 }
 
 #compra{
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
