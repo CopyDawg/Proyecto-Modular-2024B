@@ -10,6 +10,7 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 
 // FUNCION PARA CONTADOR DEL CARRITO
 export function contadorCarrito(){
+    carrito = JSON.parse(localStorage.getItem('carrito'));
     spanCarrito.innerHTML = "";
     let imgCarrito = document.createElement('IMG');
     imgCarrito.setAttribute('src', '../assets/icons/iconoCarrito.png');
@@ -39,6 +40,7 @@ function calcularTotal() {
 }
 
 export function  eliminarCarrito(nombre){
+    carrito = JSON.parse(localStorage.getItem('carrito'));
     const infoProduct = buscarCarritoNombre(nombre)
     carrito = carrito.filter(object => {
         if (object.id === infoProduct.id) {
@@ -53,6 +55,7 @@ export function  eliminarCarrito(nombre){
 }
 
 export function restarProducto(nombre) {
+    carrito = JSON.parse(localStorage.getItem('carrito'));
     const infoProduct = buscarCarritoNombre(nombre);
     if(infoProduct === null) {
         return;
@@ -68,6 +71,7 @@ export function restarProducto(nombre) {
 }
 
 export function sumarProducto(nombre) {
+    carrito = JSON.parse(localStorage.getItem('carrito'));
     const infoProduct = buscarCarritoNombre(nombre)
     if(infoProduct === null) {
         return;
@@ -81,7 +85,6 @@ export function sumarProducto(nombre) {
 
 export function agregarProducto(producto) {
     const infoProduct = buscarCarritoNombre(producto.nombre)
-    console.log(`infoProduct: ${JSON.stringify(infoProduct, null, 2)}`);
     if(infoProduct === null || infoProduct === undefined) {        
         producto.cantidad = 1;
         carrito.push(producto);
@@ -134,126 +137,139 @@ function existeCarritoNombre(nombreCarrito){
 //Función principal para la creación y renderización del carrito. 
 const RenderCarrito = () => {
     mainContainerTarjetas.innerHTML = '';
-
-carrito.forEach(compra => {
-  
-    const mainContainer = document.createElement('DIV');
-    mainContainer.setAttribute('class', 'row p-2 bg rounded itemComp align-items-center');
+    if(carrito.length === 0) {
+        console.log('entro')
+        const mainContainer = document.createElement('DIV');
+        mainContainer.innerHTML = `
+        <div>
+            <img src="../assets/images/empty_cart.png" alt="Carrito vacío" class="empty-cart">
+            <h3>No tienes productos en tu <br/> carrito de compras</h4>
+        </div>
+        `;
+        mainContainerTarjetas.appendChild(mainContainer);
+        contadorCarrito()
+        return
+    }
+    else {
+        carrito.forEach(compra => {
+            const mainContainer = document.createElement('DIV');
+            mainContainer.setAttribute('class', 'row p-2 bg rounded itemComp align-items-center');
+            
+            const imagenContainer = document.createElement('DIV');
+            imagenContainer.setAttribute('class', 'col-md-3 mt-1');
+            mainContainer.appendChild(imagenContainer);
+            
+            const imagenProduct = document.createElement('IMG');
+            imagenProduct.setAttribute('class', 'img-fluid img-responsive rounded product-image');
+            imagenProduct.setAttribute('src', compra.url);
+            imagenContainer.appendChild(imagenProduct);
+            
+            const dataContainer = document.createElement('DIV');
+            dataContainer.setAttribute('class', 'col-md-6 mt-1 row informacion');
+            mainContainer.appendChild(dataContainer);
+            
+            const titulo = document.createElement('H5');
+            titulo.setAttribute('class', 'd-flex justify-content-start NombreTarjeta');
+            dataContainer.appendChild(titulo);
+            titulo.textContent = compra.nombre;
+            
+            // const node_7 = document.createElement('DIV');
+            // node_7.setAttribute('class', ' d-flex justify-content-start mt-1 mb-1 spec-1');
+            // dataContainer.appendChild(node_7);
+            
+            // const node_8 = document.createElement('SPAN');
+            // node_7.appendChild(node_8);
+            
+            // const node_9 = document.createTextNode((new String("Diseño Unico")));
+            // node_8.appendChild(node_9);
+            
+            // const punto1 = document.createElement('SPAN');
+            // punto1.setAttribute('class', 'dot');
+            // node_7.appendChild(punto1);
+            
+            // const node_11 = document.createElement('SPAN');
+            // node_7.appendChild(node_11);
+            
+            // const node_12 = document.createTextNode((new String("Casa")));
+            // node_11.appendChild(node_12);
+            
+            // const punto2 = document.createElement('SPAN');
+            // punto2.setAttribute('class', 'dot');
+            // node_7.appendChild(punto2);
+            
+            // const node_14 = document.createElement('SPAN');
+            // node_7.appendChild(node_14);
+            
+            // const node_15 = document.createTextNode((new String("Oficina")));
+            // node_14.appendChild(node_15);
+            
+            const descripcionGeneral = document.createElement('P');
+            descripcionGeneral.setAttribute('class', 'justify-content-start text-justify para mb-0');
+            descripcionGeneral.textContent = compra.descripcion;
+            dataContainer.appendChild(descripcionGeneral);
+            
+            // const divisionContainer = document.createElement('DIV');
+            // divisionContainer.setAttribute('class', 'd-flex justify-content-end col-md-1');
+            // divisionContainer.setAttribute('style', 'height: 200px; width: 25px;');
+            // mainContainer.appendChild(divisionContainer);
+            
+            // const barraDivisora = document.createElement('DIV');
+            // barraDivisora.setAttribute('class', 'vr');
+            // barraDivisora.setAttribute('style', 'width: .3rem;');
+            // divisionContainer.appendChild(barraDivisora);
+            
+            const containerDerecho = document.createElement('DIV');
+            containerDerecho.setAttribute('class', 'align-items-center align-content-center col-md-3 border-left mt-1 row');
+            mainContainer.appendChild(containerDerecho);
+            
+            const containerMoney = document.createElement('DIV');
+            containerMoney.setAttribute('class', 'd-flex flex-row justify-content-center');
+            containerDerecho.appendChild(containerMoney);
+            
+            const precio = document.createElement('h2');
+            precio.setAttribute('class', 'mr-1 precioProducto');
+            precio.textContent = "$"+compra.precio*compra.cantidad;
+            containerMoney.appendChild(precio);
+            
+            
+            const envioH6 = document.createElement('H6');
+            envioH6.setAttribute('class', 'text-success');
+            envioH6.textContent = "Cantidad: "+compra.cantidad;
+            containerDerecho.appendChild(envioH6);
+            
+            
+            const buttonsContainer = document.createElement('DIV');
+            buttonsContainer.setAttribute('class', 'd-flex flex-column mt-4');
+            containerDerecho.appendChild(buttonsContainer);
+            
+            const buttonBorrar = document.createElement('BUTTON');
+            buttonBorrar.setAttribute('class', 'botonTarjeta btn-sm btn-Eliminar');
+            buttonBorrar.setAttribute('type', 'button');
+            buttonBorrar.textContent = "Eliminar producto"
+            buttonsContainer.appendChild(buttonBorrar);
+            
+            
+            const buttonsContainer2 = document.createElement('DIV');
+            buttonsContainer2.setAttribute('class', 'row justify-content-around');
+            buttonsContainer.appendChild(buttonsContainer2);
+            
+            const buttonAñadir = document.createElement('BUTTON');
+            buttonAñadir.setAttribute('class', 'botonTarjeta col-5 mt-2 btn-Añadir');
+            buttonAñadir.setAttribute('type', 'button');
+            buttonAñadir.textContent = "Añadir";
+            buttonAñadir.addEventListener = "";
+            buttonsContainer2.appendChild(buttonAñadir);
+            
+            const buttonRestar = document.createElement('BUTTON');
+            buttonRestar.setAttribute('class', 'botonTarjeta col-5 mt-2 btn-Restar');
+            buttonRestar.setAttribute('type', 'button');
+            buttonRestar.textContent = "Remover",
+            buttonsContainer2.appendChild(buttonRestar);
     
-    const imagenContainer = document.createElement('DIV');
-    imagenContainer.setAttribute('class', 'col-md-3 mt-1');
-    mainContainer.appendChild(imagenContainer);
+            mainContainerTarjetas.appendChild(mainContainer);
     
-    const imagenProduct = document.createElement('IMG');
-    imagenProduct.setAttribute('class', 'img-fluid img-responsive rounded product-image');
-    imagenProduct.setAttribute('src', compra.url);
-    imagenContainer.appendChild(imagenProduct);
-    
-    const dataContainer = document.createElement('DIV');
-    dataContainer.setAttribute('class', 'col-md-6 mt-1 row informacion');
-    mainContainer.appendChild(dataContainer);
-    
-    const titulo = document.createElement('H5');
-    titulo.setAttribute('class', 'd-flex justify-content-start NombreTarjeta');
-    dataContainer.appendChild(titulo);
-    titulo.textContent = compra.nombre;
-    
-    // const node_7 = document.createElement('DIV');
-    // node_7.setAttribute('class', ' d-flex justify-content-start mt-1 mb-1 spec-1');
-    // dataContainer.appendChild(node_7);
-    
-    // const node_8 = document.createElement('SPAN');
-    // node_7.appendChild(node_8);
-    
-    // const node_9 = document.createTextNode((new String("Diseño Unico")));
-    // node_8.appendChild(node_9);
-    
-    // const punto1 = document.createElement('SPAN');
-    // punto1.setAttribute('class', 'dot');
-    // node_7.appendChild(punto1);
-    
-    // const node_11 = document.createElement('SPAN');
-    // node_7.appendChild(node_11);
-    
-    // const node_12 = document.createTextNode((new String("Casa")));
-    // node_11.appendChild(node_12);
-    
-    // const punto2 = document.createElement('SPAN');
-    // punto2.setAttribute('class', 'dot');
-    // node_7.appendChild(punto2);
-    
-    // const node_14 = document.createElement('SPAN');
-    // node_7.appendChild(node_14);
-    
-    // const node_15 = document.createTextNode((new String("Oficina")));
-    // node_14.appendChild(node_15);
-    
-    const descripcionGeneral = document.createElement('P');
-    descripcionGeneral.setAttribute('class', 'justify-content-start text-justify para mb-0');
-    descripcionGeneral.textContent = compra.descripcion;
-    dataContainer.appendChild(descripcionGeneral);
-    
-    // const divisionContainer = document.createElement('DIV');
-    // divisionContainer.setAttribute('class', 'd-flex justify-content-end col-md-1');
-    // divisionContainer.setAttribute('style', 'height: 200px; width: 25px;');
-    // mainContainer.appendChild(divisionContainer);
-    
-    // const barraDivisora = document.createElement('DIV');
-    // barraDivisora.setAttribute('class', 'vr');
-    // barraDivisora.setAttribute('style', 'width: .3rem;');
-    // divisionContainer.appendChild(barraDivisora);
-    
-    const containerDerecho = document.createElement('DIV');
-    containerDerecho.setAttribute('class', 'align-items-center align-content-center col-md-3 border-left mt-1 row');
-    mainContainer.appendChild(containerDerecho);
-    
-    const containerMoney = document.createElement('DIV');
-    containerMoney.setAttribute('class', 'd-flex flex-row justify-content-center');
-    containerDerecho.appendChild(containerMoney);
-    
-    const precio = document.createElement('h2');
-    precio.setAttribute('class', 'mr-1 precioProducto');
-    precio.textContent = "$"+compra.precio*compra.cantidad;
-    containerMoney.appendChild(precio);
-    
-    
-    const envioH6 = document.createElement('H6');
-    envioH6.setAttribute('class', 'text-success');
-    envioH6.textContent = "Cantidad: "+compra.cantidad;
-    containerDerecho.appendChild(envioH6);
-    
-    
-    const buttonsContainer = document.createElement('DIV');
-    buttonsContainer.setAttribute('class', 'd-flex flex-column mt-4');
-    containerDerecho.appendChild(buttonsContainer);
-    
-    const buttonBorrar = document.createElement('BUTTON');
-    buttonBorrar.setAttribute('class', 'botonTarjeta btn-sm btn-Eliminar');
-    buttonBorrar.setAttribute('type', 'button');
-    buttonBorrar.textContent = "Eliminar producto"
-    buttonsContainer.appendChild(buttonBorrar);
-    
-    
-    const buttonsContainer2 = document.createElement('DIV');
-    buttonsContainer2.setAttribute('class', 'row justify-content-around');
-    buttonsContainer.appendChild(buttonsContainer2);
-    
-    const buttonAñadir = document.createElement('BUTTON');
-    buttonAñadir.setAttribute('class', 'botonTarjeta col-5 mt-2 btn-Añadir');
-    buttonAñadir.setAttribute('type', 'button');
-    buttonAñadir.textContent = "Añadir";
-    buttonAñadir.addEventListener = "";
-    buttonsContainer2.appendChild(buttonAñadir);
-    
-    const buttonRestar = document.createElement('BUTTON');
-    buttonRestar.setAttribute('class', 'botonTarjeta col-5 mt-2 btn-Restar');
-    buttonRestar.setAttribute('type', 'button');
-    buttonRestar.textContent = "Remover",
-    buttonsContainer2.appendChild(buttonRestar);
-
-    mainContainerTarjetas.appendChild(mainContainer);
-
-    });
+        });
+    }
     contadorCarrito()
 }
 // renderTotal()
