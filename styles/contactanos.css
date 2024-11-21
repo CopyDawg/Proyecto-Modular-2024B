@@ -161,6 +161,7 @@ col-6>input {
   border: solid;
   border-width: 1px;
   border-radius: 10px;
+  box-shadow: rgba(81, 81, 87, 0.808) 0px 7px 29px 0px;
 }
 .image-container .product-image {
   width: 90%;
@@ -184,6 +185,10 @@ col-6>input {
 .image-container .recommended-product-button {
   height: 15%;
   overflow: hidden;
+}
+
+.empty-cart {
+  width: 20%;
 }
 
 .loader {
@@ -240,4 +245,8 @@ col-6>input {
     border-width: 1px;
     border-radius: 10px;
   }
+  
+.empty-cart {
+  width: 50%;
+}
 }

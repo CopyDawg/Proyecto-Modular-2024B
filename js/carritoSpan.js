@@ -22,7 +22,6 @@ function calcularProductos() {
     carrito.forEach( (producto) => {
         total += producto.cantidad;
     });
-    console.log(`total ${total}`)
     return total;
 }
 

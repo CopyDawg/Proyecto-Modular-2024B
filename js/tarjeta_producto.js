@@ -99,11 +99,8 @@ const plantas = [
     },
 ]
 
-console.log(plantas);
-
 const RenderProducto = (idPeticion) => {
     var found = plantas.find(e => e.id == idPeticion);
-    console.log(found);
     imgTargeta.src =  found.url;
     TituloTargeta.textContent = found.nombre;
     DescrpionTargeta.textContent = found.descripcion;

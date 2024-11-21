@@ -72,14 +72,10 @@ plantas.forEach(planta => {
 containerCards.addEventListener('click', e => {
     if(e.target.classList.contains('botonTarjeta') ){
         const productoTarjeta = e.target.parentElement;
-        console.log(productoTarjeta);
-        console.log(productoTarjeta.querySelector('.nombreProducto').textContent);
 
         // //En caso de ser necesario creó un objeto de java desde el arreglo directo
         const infoProduct = (productoTarjeta.querySelector('.nombreProducto').textContent);
-        console.log(infoProduct);
         const elementoBD = buscarPlantasname(infoProduct);
-        console.log(typeof(elementoBD));
         dateBase.añadirCarrito(elementoBD);
         
     }

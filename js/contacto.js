@@ -21,8 +21,4 @@ function Captacion() {
             document.getElementById("floatingInputComentarios").focus();
         }
     }
-
-    console.log(nombreJson);
-    console.log(correoJSon);
-    console.log(mensajeJson);
 }
