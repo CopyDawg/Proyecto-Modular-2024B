@@ -162,108 +162,172 @@ var plantas = [
         descripcion: "Planta de luz interior, una excelente opción si lo que buscas es tener una planta resistente y con mucho color",
         categoria: "Plantas de Interior"
     },
+    {
+        id: 29,
+        nombre: "CACTUS ESPECIAL",
+        precio: 90.0,
+        descripcion: "Una variedad de cactus con flores \u00fanicas que resalta en cualquier espacio",
+        url: "https://i.etsystatic.com/19224331/r/il/e52d3c/5958604445/il_570xN.5958604445_8rdb.jpg",
+        categoria: "Cactus"
+    },
+    {
+        id: 30,
+        nombre: "SUCULENTA PERLA",
+        precio: 160.0,
+        descripcion: "Una suculenta con hojas en forma de perlas que a\u00f1aden un toque ex\u00f3tico",
+        url: "https://i.etsystatic.com/13929859/r/il/85de81/5509022764/il_570xN.5509022764_rx7s.jpg",
+        categoria: "Suculentas"
+    },
+    {
+        id: 31,
+        nombre: "CUNA DE MOIS\u00c9S",
+        precio: 220.0,
+        descripcion: "Planta de interior con flores blancas y hojas verdes, ideal para decorar",
+        url: "https://pf01.cdn.imgeng.in/foto_producto/xl_5ed70cc6255612006914d32ede1fba3dMexico.jpg",
+        categoria: "Plantas de Interior"
+    },
+    {
+        id: 36,
+        nombre: "KIT DE SEMILLAS",
+        precio: 80.0,
+        descripcion: "Variedad de semillas para que inicies tu propio jard\u00edn",
+        url: "https://hydrocultura.com/cdn/shop/products/b8dc11_09ce1f66a22f4219a5bfd7c9701b9772_mv2_1_600x.webp",
+        categoria: "Herramientas de jardiner\u00eda"
+    },
 ];
 
 var macetas = [
     {
-        id: 1,
+        id: 17,
         nombre: "ESFERA BARRO",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/Esfera-chica-barro.jpg?resize=300%2C300&ssl=1",
-        precio: 250.00,
-        descripcion: "Una maceta que enmarcará tus plantas más llamativas",
+        precio: 250.0,
+        descripcion: "Una maceta que enmarcar\u00e1 tus plantas m\u00e1s llamativas",
+        url: "https://http2.mlstatic.com/D_NQ_NP_902605-MLM41869467218_052020-O.webp",
         categoria: "Macetas de Barro"
     },
     {
-        id: 2,
+        id: 18,
         nombre: "TAZA BARRO",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/Taza-chica.jpg?resize=300%2C300&ssl=1",
-        precio: 200.00,
+        precio: 200.0,
         descripcion: "Una maceta minimalista para tu espacio",
+        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/Taza-chica.jpg?resize=300%2C300&ssl=1",
         categoria: "Macetas de Barro"
     },
     {
-        id: 3,
-        nombre: "ESFERA CERÁMICA",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/esfera-grande-fibra.jpg?resize=300%2C300&ssl=1",
-        precio: 450.00,
+        id: 19,
+        nombre: "ESFERA CER\u00c1MICA",
+        precio: 450.0,
         descripcion: "Una maceta perfecta para resaltar tus plantas",
-        categoria: "Macetas de Cerámica"
+        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/esfera-grande-fibra.jpg?resize=300%2C300&ssl=1",
+        categoria: "Macetas de Cer\u00e1mica"
     },
     {
-        id: 4,
-        nombre: "CUBO CERÁMICA",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/cubo-grande-fibra.jpg?resize=300%2C300&ssl=1",
-        precio: 400.00,
+        id: 20,
+        nombre: "CUBO CER\u00c1MICA",
+        precio: 400.0,
         descripcion: "Dale el estilo a tu hogar con esta hermosa maceta",
-        categoria: "Macetas de Cerámica"
+        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/cubo-grande-fibra.jpg?resize=300%2C300&ssl=1",
+        categoria: "Macetas de Cer\u00e1mica"
     },
     {
-        id: 5,
+        id: 21,
         nombre: "JARDINERA BARRO",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/Jardinera-Barro-1.jpg?resize=300%2C300&ssl=1",
-        precio: 250.00,
+        precio: 250.0,
         descripcion: "Jardinera de barro para los detalles minimalistas",
+        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/Jardinera-Barro-1.jpg?resize=300%2C300&ssl=1",
         categoria: "Macetas de barro"
     },
     {
-        id: 6,
+        id: 22,
         nombre: "JARDINERA FIBRA DE VIDRIO",
-        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/jardinera-fibra.jpg?resize=600%2C600&ssl=1",
-        precio: 530.00,
+        precio: 530.0,
         descripcion: "Jardinera elaborada con fibra de vidrio color negro",
+        url: "https://i0.wp.com/plantify.mx/wp-content/uploads/2021/10/jardinera-fibra.jpg?resize=600%2C600&ssl=1",
         categoria: "Macetas de fibra de vidrio"
     },
 ];
 
 var herramientas = [
     {
-        id: 1,
+        id: 23,
         nombre: "FERTILIZANTE NITROFOSCA",
+        precio: 250.0,
+        descripcion: "Este fertilizante ayudar\u00e1 a que tu planta crezca saludable y tenga brotes nuevos",
         url: "https://elheraldodemartinez.com.mx/images/Articulos2018/Articulo/2020/011Noviembre/28Nov/PAG-3-PRINCIPAL.png",
-        precio: 250.00,
-        descripcion: "Este fertilizante ayudará a que tu planta crezca saludable y tenga brotes nuevos",
         categoria: "Fertilizantes"
     },
     {
-        id: 2,
+        id: 24,
         nombre: "FERTILIZANTE FLORIFIL",
+        precio: 250.0,
+        descripcion: "Este fertilizante potenciar\u00e1 el desarrollo de flores en tus plantas",
         url: "https://chedrauimx.vtexassets.com/arquivos/ids/35879878-800-auto?v=638617759434270000&width=800&height=auto&aspect=true",
-        precio: 250.00,
-        descripcion: "Este fertilizante potenciará el desarrollo de flores en tus plantas",
         categoria: "Fertilizantes"
     },
     {
-        id: 3,
+        id: 25,
         nombre: "SISTEMA DE RIEGO",
+        precio: 950.0,
+        descripcion: "Es una herramienta que te permitir\u00e1 regar de manera f\u00e1cil y pr\u00e1ctica hasta 30m de distancia",
         url: "https://m.media-amazon.com/images/I/812q2D0i3sL._AC_UF1000,1000_QL80_.jpg",
-        precio: 950.00,
-        descripcion: "Es una herramienta que te permitirá regar de manera fácil y práctica hasta 30m de distancia",
         categoria: "Herramientas de riego"
     },
     {
-        id: 4,
+        id: 26,
         nombre: "KIT DE HERRAMIENTAS",
-        url: "https://as2.ftcdn.net/v2/jpg/02/65/10/51/1000_F_265105182_1kHISR3wzXYeADjOmnhU8lLvd6EyNxuE.jpg",
-        precio: 550.00,
+        precio: 550.0,
         descripcion: "Todo lo que necesitas para dar mantenimiento a tus preciadas plantas",
-        categoria: "Herramientas de jardinería"
+        url: "https://as2.ftcdn.net/v2/jpg/02/65/10/51/1000_F_265105182_1kHISR3wzXYeADjOmnhU8lLvd6EyNxuE.jpg",
+        categoria: "Herramientas de jardiner\u00eda"
     },
     {
-        id: 5,
-        nombre: "CINTURÓN DE CUERO",
+        id: 27,
+        nombre: "CINTUR\u00d3N DE CUERO",
+        precio: 450.0,
+        descripcion: "Vuelve m\u00e1s f\u00e1cil tu trabajo en la jardiner\u00eda con ayuda de este cintur\u00f3n perfecto para tus herramientas",
         url: "https://www.elblogdelatabla.com/wp-content/uploads/2020/11/cinturon-jardineria-herramientas-mano-florista-cuero-merifaLeather.jpg",
-        precio: 450.00,
-        descripcion: "Vuelve más fácil tu trabajo en la jardinería con ayuda de este cinturón perfecto para tus herramientas",
-        categoria: "Accesorios de jardinería"
+        categoria: "Accesorios de jardiner\u00eda"
     },
     {
-        id: 6,
+        id: 28,
         nombre: "MANGUERA DE RIEGO",
-        url: "https://plasticforte.com/wp-content/uploads/2022/06/accesorios-jardineria-plasticforte.jpg",
-        precio: 500.00,
+        precio: 500.0,
         descripcion: "Para que tus plantas queden perfectamente regadas, utiliza nuestra manguera con soporte a pared",
+        url: "https://plasticforte.com/wp-content/uploads/2022/06/accesorios-jardineria-plasticforte.jpg",
         categoria: "Herramientas de riego"
     },
+    {
+        id: 34,
+        nombre: "TIJERAS DE PODA",
+        precio: 120.0,
+        descripcion: "Herramienta indispensable para el cuidado y mantenimiento de tus plantas",
+        url: "https://cdn.homedepot.com.mx/productos/664085/664085-d.jpg",
+        categoria: "Herramientas de jardiner\u00eda"
+    },
+    {
+        id: 35,
+        nombre: "SOPORTE PARA PLANTAS",
+        precio: 350.0,
+        descripcion: "Un soporte elegante para que tus plantas luzcan a\u00fan m\u00e1s",
+        url: "https://i.etsystatic.com/28498285/r/il/344212/5132563507/il_fullxfull.5132563507_8zrt.jpg",
+        categoria: "Accesorios de jardiner\u00eda"
+    },
+    {
+        id: 37,
+        nombre: "ABONO DE LOMBRIZ",
+        precio: 250.0,
+        descripcion: "Mejora la calidad de la tierra con este abono 100% org\u00e1nico",
+        url: "https://hydrocultura.com/cdn/shop/products/b8dc11_999dba4c61114da09a3dcb096f0fd445_mv2_1_600x.webp",
+        categoria: "Fertilizantes"
+    },
+    {
+        id: 38,
+        nombre: "JARDINERA DE MADERA",
+        precio: 600.0,
+        descripcion: "Una jardinera r\u00fastica y decorativa para tus plantas",
+        url: "https://m.media-amazon.com/images/I/81t09lKNGQL.jpg",
+        categoria: "Macetas de madera"
+    }
 ]
 
 
