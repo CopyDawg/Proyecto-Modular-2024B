@@ -38,7 +38,6 @@ form.addEventListener('submit',(event)=>{
     const allData = Object.fromEntries(data.entries());
 
     //se muestra en consola el objeto json
-    console.log(JSON.stringify(allData));
 
     //Enviar a la pagina de inicio si se inicia sesion exitosamente
       //window.location.href = '../index.php';
@@ -52,9 +51,6 @@ form.addEventListener('submit',(event)=>{
 import * as dateBase from "./base_Datos.js";
 
 var carrito = JSON.parse(localStorage.getItem('carrito'));
-
-console.log(dateBase.carrito);
-console.log(carrito);
 
 // FUNCION PARA CONTADOR DEL CARRITO
 function contadorCarrito(){

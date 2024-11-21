@@ -159,8 +159,6 @@ mainContainerTarjetas.appendChild(mainContainer);
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);
   
-    console.log(foundId);
-  
     carrito = carrito.filter((carritoId) => {
       return carritoId !== foundId;
     });
