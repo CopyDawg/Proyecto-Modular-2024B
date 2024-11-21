@@ -8,7 +8,7 @@ var loMasPedido = [
         categoria: "Suculentas"
     },
     {
-        id: 3,
+        id: 19,
         nombre: "ESFERA CERÁMICA",
         url: "https://blumart.mx/cdn/shop/products/DSC_0352.jpg",
         precio: 450.00,
@@ -16,8 +16,8 @@ var loMasPedido = [
         categoria: "Macetas de Cerámica"
     },
     {
-        id: 4,
-        nombre: "KIT DE HERRAMIENTAS MULTIUSO PARA TODO TIPO DE HOGAR O DONDE USTED QUIERA USARLO, UNA VEZ QUE LO COMPRE ES DE USTED Y YA USTED SABRA",
+        id: 26,
+        nombre: "KIT DE HERRAMIENTAS",
         url: "https://as2.ftcdn.net/v2/jpg/02/65/10/51/1000_F_265105182_1kHISR3wzXYeADjOmnhU8lLvd6EyNxuE.jpg",
         precio: 550.00,
         descripcion: "Todo lo que necesitas para dar mantenimiento a tus preciadas plantas",
@@ -398,10 +398,7 @@ export function añadirCarrito(producto) {
 
 
     carrito = JSON.parse(localStorage.getItem('carrito')) ? JSON.parse(localStorage.getItem('carrito')) : [];
-    console.log(producto)
-    console.log('carrito' ,carrito)
     const isFound = carrito.some(element => {
-        console.log('elemento' ,element)
         if (element.id === producto.id) {
             return true;
         }
@@ -413,7 +410,6 @@ export function añadirCarrito(producto) {
         producto.cantidad = 1;
     }
     else {
-        console.log("This item already exists");
         const index = carrito.findIndex(object => {
             return object.id === producto.id;
         });
@@ -422,7 +418,6 @@ export function añadirCarrito(producto) {
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
 
-    console.log(carrito);
 }
 
 
