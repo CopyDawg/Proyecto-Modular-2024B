@@ -10,7 +10,6 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 
 // FUNCION PARA CONTADOR DEL CARRITO
 export function contadorCarrito(){
-    carrito = JSON.parse(localStorage.getItem('carrito'));
     spanCarrito.innerHTML = "";
     let imgCarrito = document.createElement('IMG');
     imgCarrito.setAttribute('src', '../assets/icons/iconoCarrito.png');
@@ -40,7 +39,7 @@ function calcularTotal() {
 }
 
 export function  eliminarCarrito(nombre){
-    carrito = JSON.parse(localStorage.getItem('carrito'));
+    console.log(nombre)
     const infoProduct = buscarCarritoNombre(nombre)
     carrito = carrito.filter(object => {
         if (object.id === infoProduct.id) {
@@ -48,6 +47,7 @@ export function  eliminarCarrito(nombre){
         }
         return object.id !== infoProduct.id;
     });
+    console.log(carrito)
     localStorage.setItem('carrito', JSON.stringify(carrito));
     carrito = JSON.parse(localStorage.getItem('carrito'));
     RenderCarrito();
@@ -55,7 +55,6 @@ export function  eliminarCarrito(nombre){
 }
 
 export function restarProducto(nombre) {
-    carrito = JSON.parse(localStorage.getItem('carrito'));
     const infoProduct = buscarCarritoNombre(nombre);
     if(infoProduct === null) {
         return;
@@ -71,7 +70,6 @@ export function restarProducto(nombre) {
 }
 
 export function sumarProducto(nombre) {
-    carrito = JSON.parse(localStorage.getItem('carrito'));
     const infoProduct = buscarCarritoNombre(nombre)
     if(infoProduct === null) {
         return;
@@ -94,6 +92,7 @@ export function agregarProducto(producto) {
         const index = carrito.findIndex(item => item.nombre === producto.nombre);
         carrito[index] = producto;
     }
+    console.log(`carrito al agregar: ${JSON.stringify(carrito, null, 2)}`)
     localStorage.setItem('carrito', JSON.stringify(carrito));
     RenderCarrito();
     calcularTotal();
